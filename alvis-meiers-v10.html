@@ -1,0 +1,2597 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fizioterapeits Rīgā | Ārstnieciskā masāža un MANNEA terapija – Alvis Meiers</title>
+  <meta name="description" content="Alvis Meiers – fizioterapeits Rīgā. Ārstnieciskā masāža, saistaudu terapija un MANNEA terapija. Palīdzība muguras, kakla un plecu sāpēm. +371 29179767." />
+  <meta name="keywords" content="fizioterapeits Rīgā, ārstnieciskā masāža Rīgā, saistaudu masāža, MANNEA terapija, muguras sāpes" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f5f4f0" />
+  <meta name="geo.region" content="LV-RIX" />
+  <meta name="geo.placename" content="Rīga" />
+  <meta property="og:title" content="Fizioterapeits Rīgā – Alvis Meiers" />
+  <meta property="og:description" content="Ārstnieciskā masāža, saistaudu terapija un MANNEA terapija Rīgā." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:      #f5f4f0;
+      --surface: #ffffff;
+      --text:    #0e0e0e;
+      --muted:   #6b6b6b;
+      --line:    rgba(14,14,14,0.1);
+      --accent:  #E8612A;
+      --accent-d:#c44e1f;
+      --shadow:  0 8px 32px rgba(14,14,14,0.10);
+      --shadow-lg:0 20px 60px rgba(14,14,14,0.13);
+      --radius:  20px;
+      --radius-sm:14px;
+      --max:     1280px;
+      --nav-h:   72px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      min-height: 100vh;
+      /* Prevent mobile rubber-band horizontal scroll */
+      position: relative;
+      width: 100%;
+    }
+
+    /* ─── LANG ─── */
+    [data-lang] { display: none !important; }
+    body.lv [data-lang="lv"] { display: revert !important; }
+    body.ru [data-lang="ru"] { display: revert !important; }
+
+    /* Fix inline elements (span, a text) to not become block */
+    span[data-lang], a[data-lang] { display: none !important; }
+    body.lv span[data-lang="lv"], body.lv a[data-lang="lv"] { display: inline !important; }
+    body.ru span[data-lang="ru"], body.ru a[data-lang="ru"] { display: inline !important; }
+
+    /* ─── Noise grain overlay ─── */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: .5;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    h1,h2,h3,h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+    /* Latvian diacritics (ā ē ī ū ģ ķ ļ ņ š ž č) sit above the cap line,
+       so all headings need enough line-height to prevent ascender collisions */
+    h1 {
+      font-size: clamp(3rem, 6.5vw, 7.5rem);
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+    }
+    h2 {
+      font-size: clamp(1.9rem, 3.8vw, 3.6rem);
+      line-height: 1.04;
+      letter-spacing: -0.025em;
+    }
+    h3 {
+      font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+    }
+    h4 {
+      font-size: .95rem;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    /* Italic accent utility — apply to em or .accent-italic */
+    em, .accent-i {
+      font-style: italic;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+    }
+    p { color: var(--muted); line-height: 1.7; font-size: .97rem; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      height: 52px;
+      padding: 0 26px;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      letter-spacing: .01em;
+      cursor: pointer;
+      border: none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: var(--text);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(14,14,14,.25);
+    }
+    .btn-primary:hover { box-shadow: 0 10px 28px rgba(14,14,14,.3); }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(232,97,42,.35);
+    }
+    .btn-accent:hover { background: var(--accent-d); box-shadow: 0 10px 28px rgba(232,97,42,.4); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--line);
+    }
+    .btn-ghost:hover { background: var(--surface); }
+
+    .btn-white {
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: var(--shadow);
+    }
+
+    /* ─── EYEBROW ─── */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 20px; height: 2px;
+      background: var(--accent);
+      display: block;
+    }
+
+    /* ─── NAV ─── */
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(245,244,240,.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav {
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -.02em;
+    }
+    .brand-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .nav-links a {
+      padding: 9px 13px;
+      border-radius: 10px;
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: var(--text); background: rgba(14,14,14,.05); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .lang-toggle {
+      display: flex;
+      background: var(--surface);
+      border-radius: 999px;
+      padding: 3px;
+      border: 1px solid var(--line);
+      gap: 2px;
+    }
+    .lang-btn {
+      padding: 5px 13px;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      transition: .2s;
+      letter-spacing: .04em;
+    }
+    .lang-btn.active {
+      background: var(--text);
+      color: #fff;
+    }
+
+    /* ─── SECTION ─── */
+    .section { padding: 96px 0; }
+    .section-sm { padding: 60px 0; }
+    .section-head { margin-bottom: 48px; }
+    .section-head.flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      overflow: visible; /* cards must not clip */
+      min-height: calc(100vh - var(--nav-h));
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+    }
+
+    .hero-left {
+      padding: 72px 56px 72px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 48px;
+      position: relative;
+      z-index: 2;
+      border-right: 1px solid var(--line);
+    }
+
+    .hero-right {
+      position: relative;
+      overflow: visible; /* allow cards to poke out */
+    }
+
+    /* Video fills the whole column, clips internally */
+    .hero-video-wrap {
+      position: absolute;
+      inset: 0;
+      overflow: hidden; /* only the video itself clips */
+    }
+
+    .hero-img-main {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(6%);
+    }
+
+    .hero-overlay-card {
+      position: absolute;
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      background: var(--surface);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(14,14,14,.06);
+      z-index: 10;
+    }
+    .hero-card-stat {
+      bottom: 48px;
+      right: 28px;
+      min-width: 160px;
+    }
+    .hero-card-tag {
+      top: 48px;
+      left: 20px; /* stays inside the right column, never clips left edge */
+      background: var(--text);
+      color: #fff;
+      padding: 11px 17px;
+      border-radius: var(--radius);
+    }
+
+    .stat-up {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--accent);
+    }
+    .stat-label {
+      font-size: .82rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .stat-prefix {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .hero-top {}
+    .hero-sub {
+      margin-top: 24px;
+      font-size: 1.08rem;
+      max-width: 440px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .hero-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1.5px solid var(--text);
+      padding-bottom: 2px;
+      transition: color .2s;
+    }
+    .hero-link:hover { color: var(--accent); border-color: var(--accent); }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hero-meta-val {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: var(--text);
+    }
+    .hero-meta-lbl {
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    .hero-meta-sep {
+      width: 1px;
+      height: 36px;
+      background: var(--line);
+    }
+
+    /* ─── MARQUEE ─── */
+    .marquee-wrap {
+      background: var(--text);
+      padding: 18px 0;
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 22s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      padding: 0 28px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+    }
+    .marquee-item .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ─── SERVICES ─── */
+    .services-section-wrap { background: var(--bg); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .service-card {
+      background: var(--surface);
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-right: 1px solid var(--line);
+      transition: background .3s, color .3s;
+      cursor: default;
+    }
+    .service-card:last-child { border-right: none; }
+    /* Only hover on devices that support true hover (no touch-stuck) */
+    @media (hover: hover) {
+      .service-card:hover { background: var(--text); }
+      .service-card:hover h3,
+      .service-card:hover p,
+      .service-card:hover .service-num,
+      .service-card:hover .service-list li { color: rgba(255,255,255,.85); }
+      .service-card:hover .service-tag { background: var(--accent); color: #fff; }
+      .service-card:hover .service-learn { color: #fff; border-color: rgba(255,255,255,.3); }
+    }
+
+    .service-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: .1em;
+    }
+    .service-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 13px;
+      border-radius: 999px;
+      background: rgba(232,97,42,.1);
+      color: var(--accent);
+      font-size: .75rem;
+      font-weight: 700;
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: .04em;
+      width: fit-content;
+      transition: background .3s, color .3s;
+    }
+    .service-list {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+    .service-list li {
+      font-size: .88rem;
+      color: var(--muted);
+      display: flex;
+      gap: 9px;
+      align-items: start;
+      line-height: 1.5;
+      transition: color .3s;
+    }
+    .service-list li::before {
+      content: "→";
+      color: var(--accent);
+      font-size: .75rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .service-learn {
+      margin-top: auto;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--text);
+      border-bottom: 1.5px solid var(--line);
+      padding-bottom: 3px;
+      width: fit-content;
+      cursor: pointer;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      transition: color .2s, border-color .2s;
+    }
+    .service-learn:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ─── ABOUT ─── */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .about-photo-col {
+      position: relative;
+      min-height: 580px;
+      border-right: 1px solid var(--line);
+    }
+    .about-photo-col img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(5%);
+    }
+    .about-photo-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .about-photo-badge-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--accent);
+      display: grid;
+      place-items: center;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 800;
+      color: #fff;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .about-text-col {
+      padding: 52px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+    .about-text-col p { font-size: 1rem; line-height: 1.75; }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .about-stat {
+      background: var(--bg);
+      padding: 20px 22px;
+    }
+    .about-stat-val {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -.04em;
+      color: var(--text);
+    }
+    .about-stat-lbl {
+      font-size: .8rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    /* ─── PRICES ─── */
+    .prices-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .price-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 32px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: box-shadow .3s, transform .3s;
+    }
+    .price-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .price-card.featured {
+      background: var(--text);
+      border-color: var(--text);
+    }
+    .price-card.featured h3,
+    .price-card.featured p,
+    .price-card.featured .price-amount,
+    .price-card.featured .price-list li { color: rgba(255,255,255,.8); }
+    .price-card.featured .price-amount { color: var(--accent); }
+    .price-card.featured .price-list li::before { color: var(--accent); }
+    .price-card.featured .price-period { color: rgba(255,255,255,.4); }
+
+    .price-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .price-amount {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -.04em;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .price-period {
+      font-size: .75rem;
+      color: var(--muted);
+    }
+    .price-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      flex: 1;
+    }
+    .price-list li {
+      font-size: .88rem;
+      color: var(--muted);
+      display: flex;
+      gap: 9px;
+      align-items: start;
+      line-height: 1.5;
+    }
+    .price-list li::before {
+      content: "—";
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+    .price-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      background: rgba(232,97,42,.12);
+      color: var(--accent);
+      width: fit-content;
+    }
+
+    /* ─── PHOTO GRID ─── */
+    .photo-section {
+      background: var(--text);
+      padding: 72px 0;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .photo-item {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+    }
+    .photo-item.tall {
+      grid-row: span 2;
+    }
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease;
+      filter: grayscale(10%);
+    }
+    .photo-item:hover img { transform: scale(1.04); }
+
+    /* ─── MANNEA ─── */
+    .mannea-section {
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .mannea-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      min-height: 520px;
+    }
+    .mannea-left {
+      padding: 64px 52px 64px 0;
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      justify-content: center;
+    }
+    .mannea-logo {
+      width: 120px;
+      height: auto;
+      object-fit: contain;
+    }
+    .mannea-right {
+      padding: 64px 0 64px 52px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+    }
+    .mannea-tag-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .mannea-tag {
+      padding: 7px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: .8rem;
+      color: var(--muted);
+      transition: border-color .2s, color .2s;
+    }
+    .mannea-tag:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ─── FAQ ─── */
+    .faq-list-items {
+      display: grid;
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      width: 100%;
+      padding: 24px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      transition: background .2s;
+    }
+    .faq-q:hover { background: var(--bg); }
+    .faq-icon {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      border: 1.5px solid var(--line);
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      color: var(--muted);
+      transition: background .2s, color .2s, transform .3s;
+      font-family: monospace;
+    }
+    .faq-item.open .faq-icon {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, padding .3s;
+      padding: 0 28px;
+    }
+    .faq-item.open .faq-a {
+      max-height: 400px;
+      padding: 0 28px 24px;
+    }
+    .faq-a p { font-size: .93rem; }
+
+    /* ─── CONTACT ─── */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .contact-left {
+      padding: 52px 44px;
+      background: var(--text);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .contact-left h3 { color: #fff; }
+    .contact-left p { color: rgba(255,255,255,.55); }
+    .contact-links { display: grid; gap: 10px; }
+    .contact-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 18px;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #fff;
+      font-weight: 600;
+      font-size: .9rem;
+      transition: background .2s;
+    }
+    .contact-link:hover { background: rgba(255,255,255,.12); }
+    .contact-link span:last-child { color: rgba(255,255,255,.5); font-size: .85rem; }
+    .contact-right { padding: 52px 44px; }
+    .contact-right h3 { margin-bottom: 8px; }
+    .contact-right > p { margin-bottom: 28px; }
+
+    form { display: grid; gap: 14px; }
+    .field { display: grid; gap: 7px; }
+    label { font-size: .8rem; font-weight: 600; font-family: 'DM Sans', sans-serif; letter-spacing: .04em; text-transform: uppercase; color: var(--text); }
+    input, textarea {
+      width: 100%;
+      border: 1.5px solid var(--line);
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      font: inherit;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      resize: vertical;
+      outline: none;
+      transition: border-color .2s, background .2s;
+      font-size: .95rem;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+      background: var(--surface);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--text);
+      padding: 40px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 800;
+      color: #fff;
+      font-size: 1.05rem;
+    }
+    .footer-sub {
+      font-size: .82rem;
+      color: rgba(255,255,255,.4);
+      margin-top: 4px;
+    }
+    .footer-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-footer-ghost {
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.8);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .btn-footer-ghost:hover { background: rgba(255,255,255,.14); }
+
+    /* ─── MODALS ─── */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(14,14,14,.55);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+    }
+    .modal.active { display: flex; }
+    .modal-dialog {
+      width: min(860px, 100%);
+      max-height: 88vh;
+      overflow: auto;
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 32px;
+      position: relative;
+      animation: modalIn .3s cubic-bezier(.22,1,.36,1) both;
+      border: 1px solid var(--line);
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(24px) scale(.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .modal-close {
+      position: sticky;
+      top: 0;
+      float: right;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 1.2rem;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      z-index: 5;
+      margin-bottom: 8px;
+      transition: background .2s;
+    }
+    .modal-close:hover { background: var(--text); color: #fff; }
+    .modal-body { display: grid; gap: 20px; clear: both; }
+    .modal-body h3 { font-size: clamp(1.4rem,2.5vw,2rem); }
+    .modal-section {
+      padding: 20px;
+      border-radius: var(--radius-sm);
+      background: var(--bg);
+      border: 1px solid var(--line);
+    }
+    .modal-section h4 { margin-bottom: 12px; }
+    .modal-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+    .modal-list li {
+      font-size: .9rem;
+      color: var(--muted);
+      display: flex;
+      gap: 10px;
+      line-height: 1.55;
+    }
+    .modal-list li::before { content: "—"; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+
+    /* ─── CERT GRID IN MODAL ─── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .cert-item {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      background: var(--bg);
+      border: 1px solid var(--line);
+    }
+    .cert-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ─── REVEAL ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+      will-change: opacity, transform;
+    }
+    .reveal.from-left {
+      transform: translateX(-40px);
+    }
+    .reveal.from-right {
+      transform: translateX(40px);
+    }
+    .reveal.scale-in {
+      transform: scale(.94);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0) translateX(0) scale(1);
+    }
+
+    /* ─── Hero entrance ─── */
+    .h-anim { opacity: 0; }
+    .h-anim.in { animation: hIn .9s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes hIn {
+      from { opacity: 0; transform: translateY(36px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .h-anim-l.in { animation: hInL .9s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes hInL {
+      from { opacity: 0; transform: translateX(-36px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .h-anim-r.in { animation: hInR .9s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes hInR {
+      from { opacity: 0; transform: translateX(36px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .h-float { animation: floaty 6s ease-in-out infinite; }
+    @keyframes floaty {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+
+    /* ── Tablet (≤1100px) ── */
+    @media (max-width: 1100px) {
+      /* Hero stays 2-col but balanced */
+      .hero { grid-template-columns: 1fr 1fr; min-height: auto; }
+      .hero-left { padding: 52px 40px 52px 0; }
+      .hero-card-tag { left: -20px; top: 36px; }
+      .hero-card-stat { right: 20px; bottom: 36px; }
+
+      /* Services: 2 columns */
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-card { border-right: none; border-bottom: 1px solid var(--line); }
+      .service-card:nth-child(odd) { border-right: 1px solid var(--line); }
+      .service-card:last-child { border-right: none; border-bottom: none; }
+
+      /* Prices: 2 cols */
+      .prices-grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* About: stack */
+      .about-layout { grid-template-columns: 1fr; }
+      .about-photo-col { min-height: 400px; max-height: 460px; border-right: none; border-bottom: 1px solid var(--line); }
+
+      /* MANNEA: stack */
+      .mannea-layout { grid-template-columns: 1fr; }
+      .mannea-left { padding: 52px 0 40px; border-right: none; border-bottom: 1px solid var(--line); }
+      .mannea-right { padding: 40px 0 52px; }
+
+      /* Contact: stack */
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-left { padding: 44px 40px; }
+      .contact-right { padding: 44px 40px; }
+      .contact-left img { display: none; }
+
+      /* Photo grid: 2 cols */
+      .photo-grid { grid-template-columns: repeat(2, 1fr); }
+      .photo-item.tall { grid-row: span 1; }
+      .photo-item img { min-height: 280px; }
+
+      .cert-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* ── Mobile (≤768px) ── */
+    @media (max-width: 768px) {
+      :root { --nav-h: 60px; }
+
+      /* Prevent horizontal overflow from any element */
+      .container { width: calc(100% - 32px); }
+      section, div, header, footer { max-width: 100%; }
+
+      /* Nav */
+      .nav-links { display: none; }
+      nav { padding: 0 16px; }
+      .lang-btn { padding: 4px 10px; font-size: .74rem; }
+
+      /* Typography */
+      h1 { font-size: clamp(2rem, 9vw, 2.8rem); line-height: 1.02; }
+      h2 { font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1.06; }
+
+      /* Sections */
+      .section { padding: 48px 0; }
+
+      /* ── HERO on mobile: keep 2-col but compact ── */
+      .hero {
+        grid-template-columns: 1fr 1fr;
+        min-height: auto;
+        align-items: stretch;
+      }
+      .hero-left {
+        padding: 32px 16px 32px 0;
+        gap: 24px;
+      }
+      .hero-sub { font-size: .9rem; margin-top: 14px; }
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      .hero-actions .btn { height: 44px; font-size: .82rem; padding: 0 16px; }
+      .hero-link { font-size: .8rem; }
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        padding-top: 20px;
+      }
+      .hero-meta-sep { display: none; }
+      .hero-meta-item {
+        padding: 12px 0;
+        border-right: 1px solid var(--line);
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .hero-meta-item:last-child { border-right: none; }
+      .hero-meta-val { font-size: 1.1rem; }
+      .hero-meta-lbl { font-size: .68rem; }
+
+      /* Hide floating info cards on mobile */
+      .hero-overlay-card { display: none; }
+
+      /* Services: single col */
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { border-right: none !important; }
+      .service-card:last-child { border-bottom: none; }
+
+      /* Prices: single col */
+      .prices-grid { grid-template-columns: 1fr; }
+
+      /* Section head */
+      .section-head.flex { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .section-head.flex p { max-width: 100%; }
+
+      /* About */
+      .about-photo-col { min-height: 280px; max-height: 56vw; }
+      .about-text-col { padding: 28px 20px; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+
+      /* Photo grid */
+      .photo-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+      .photo-item img { min-height: 40vw; }
+
+      /* MANNEA */
+      .mannea-tag { font-size: .74rem; padding: 5px 10px; }
+      .mannea-left { padding: 36px 0 28px; }
+      .mannea-right { padding: 28px 0 40px; }
+
+      /* Contact */
+      .contact-left { padding: 32px 20px; }
+      .contact-right { padding: 32px 20px; }
+
+      /* Form chips wrap well on small screens */
+      .chip-group { gap: 6px; }
+      .chip span { font-size: .79rem; padding: 7px 12px; }
+
+      /* Footer */
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+      /* Cert grid */
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* Marquee */
+      .marquee-item { font-size: .74rem; padding: 0 16px; }
+    }
+
+    /* ── Small mobile (≤480px) ── */
+    @media (max-width: 480px) {
+      /* Hero: stack vertically on very small screens */
+      .hero { grid-template-columns: 1fr; }
+      .hero-left {
+        padding: 32px 0 24px;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        order: 1;
+      }
+      .hero-right {
+        order: 2;
+        min-height: 64vw;
+      }
+      .hero-actions { flex-direction: row; flex-wrap: wrap; }
+
+      h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+      .photo-grid { grid-template-columns: 1fr 1fr; }
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+    }
+    /* ─── FORM CHIPS & TOGGLES ─── */
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      cursor: pointer;
+    }
+    .chip input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .chip span {
+      display: inline-flex;
+      padding: 8px 15px;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      font-size: .83rem;
+      font-weight: 500;
+      color: var(--muted);
+      background: var(--bg);
+      transition: border-color .18s, background .18s, color .18s;
+      cursor: pointer;
+      user-select: none;
+    }
+    .chip input:checked + span,
+    .chip input:checked ~ span {
+      border-color: var(--accent);
+      background: rgba(232,97,42,.08);
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .chip:hover span { border-color: rgba(232,97,42,.4); color: var(--text); }
+
+    .toggle-group {
+      display: flex;
+      background: var(--bg);
+      border: 1.5px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 4px;
+      gap: 4px;
+    }
+    .toggle-opt {
+      flex: 1;
+      display: flex;
+      cursor: pointer;
+    }
+    .toggle-opt input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .toggle-opt span {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-align: center;
+      transition: background .18s, color .18s, box-shadow .18s;
+      cursor: pointer;
+      user-select: none;
+    }
+    .toggle-opt input:checked + span,
+    .toggle-opt input:checked ~ span {
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(14,14,14,.1);
+    }
+
+    /* ─── CTA STRIP ─── */
+    .cta-strip {
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+    }
+    .cta-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .cta-strip-text {}
+    .cta-strip-text strong {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .cta-strip-text p {
+      font-size: .9rem;
+      color: var(--muted);
+    }
+    .cta-strip-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .cta-strip-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .cta-strip-btns { width: 100%; }
+      .cta-strip-btns .btn { flex: 1; justify-content: center; }
+    }
+
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Alvis Meiers – Fizioterapeits Rīgā",
+    "description": "Ārstnieciskā masāža, saistaudu terapija un MANNEA terapija. Individuāla pieeja muguras, kakla un plecu sāpēm.",
+    "telephone": "+37129179767",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rīga",
+      "addressCountry": "LV"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 56.9496, "longitude": 24.1052 },
+    "sameAs": ["https://www.instagram.com/alvis.promassage"],
+    "priceRange": "60–120 EUR",
+    "currenciesAccepted": "EUR",
+    "areaServed": "Rīga",
+    "medicalSpecialty": ["Physiotherapy", "Massage Therapy"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Procedūras",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Saistaudu un klasiskā masāža (90 min)", "price": "90", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "Padziļinātā 2h procedūra", "price": "120", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "MANNEA terapija", "price": "90", "priceCurrency": "EUR" }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Cik maksā fizioterapeita procedūras Rīgā?", "acceptedAnswer": { "@type": "Answer", "text": "No 60 EUR līdz 120 EUR. MANNEA terapija bērniem – 75 EUR." } },
+      { "@type": "Question", "name": "Vai terapija palīdz muguras un kakla sāpēm?", "acceptedAnswer": { "@type": "Answer", "text": "Jā. Procedūras ir vērstas uz hroniskas spriedzes, muguras, kakla un plecu sāpju mazināšanu." } },
+      { "@type": "Question", "name": "Kā pieteikties pie Alvis Meiers?", "acceptedAnswer": { "@type": "Answer", "text": "Zvaniet +371 29179767 vai rakstiet Instagram @alvis.promassage." } }
+    ]
+  }
+  </script>
+</head>
+<body class="lv">
+
+<!-- ─── NAV ─── -->
+<div class="nav-wrap">
+  <div class="container">
+    <nav>
+      <a class="brand" href="#">
+        <div class="brand-dot"></div>
+        <span data-lang="lv">Alvis Meiers</span>
+        <span data-lang="ru">Алвис Мейерс</span>
+      </a>
+      <div class="nav-links" role="navigation">
+        <a href="#pakalpojumi" data-lang="lv">Pakalpojumi</a>
+        <a href="#par-specialistu" data-lang="lv">Par speciālistu</a>
+        <a href="#cenas" data-lang="lv">Cenas</a>
+        <a href="#manea">MANNEA</a>
+        <a href="#faq" data-lang="lv">Jautājumi</a>
+        <a href="#kontakti" data-lang="lv">Kontakti</a>
+        <a href="#pakalpojumi" data-lang="ru">Услуги</a>
+        <a href="#par-specialistu" data-lang="ru">О специалисте</a>
+        <a href="#cenas" data-lang="ru">Цены</a>
+        <a href="#faq" data-lang="ru">Вопросы</a>
+        <a href="#kontakti" data-lang="ru">Контакты</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-set-lang="lv">LV</button>
+          <button class="lang-btn" data-set-lang="ru">RU</button>
+        </div>
+        <a class="btn btn-accent" href="#pieteikties" style="height:44px;padding:0 20px;font-size:.85rem;">
+          <span data-lang="lv">Pieteikties</span>
+          <span data-lang="ru">Записаться</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="top" aria-labelledby="hero-h1">
+  <div class="container" style="display:contents;">
+    <div class="hero-left container" style="padding-top:72px;padding-bottom:72px;">
+      <div class="hero-top">
+        <div class="eyebrow h-anim" style="animation-delay:.1s">
+          <span data-lang="lv">Fizioterapeits · Rīga · Iepriekšējs pieraksts</span>
+          <span data-lang="ru">Физиотерапевт · Рига · Предварительная запись</span>
+        </div>
+          <h1 id="hero-h1" class="h-anim-l" style="animation-delay:.2s;">
+          <span data-lang="lv">Ārstnieciskā<br><em class="accent-i" style="font-style:italic;">masāža</em><br><em style="color:var(--accent);font-style:normal;">Rīgā</em></span>
+          <span data-lang="ru">Лечебный<br><em class="accent-i" style="font-style:italic;">массаж</em><br><em style="color:var(--accent);font-style:normal;">в Риге</em></span>
+        </h1>
+        <p class="hero-sub h-anim" style="animation-delay:.36s;">
+          <span data-lang="lv">Palīdzība muguras, kakla un plecu sāpēm. Saistaudu terapija, klasiskā masāža un MANNEA terapija. Individuāla pieeja katram klientam.</span>
+          <span data-lang="ru">Помощь при болях в спине, шее и плечах. Соединительнотканная терапия, классический массаж и MANNEA терапия. Индивидуальный подход к каждому клиенту.</span>
+        </p>
+        <div class="hero-actions h-anim" style="animation-delay:.48s;">
+          <a class="btn btn-primary" href="#pieteikties">
+            <span data-lang="lv">Rezervēt laiku</span>
+            <span data-lang="ru">Записаться</span>
+          </a>
+          <a class="hero-link" href="#pakalpojumi">
+            <span data-lang="lv">Apskatīt procedūras</span>
+            <span data-lang="ru">Смотреть процедуры</span>
+            →
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-meta h-anim" style="animation-delay:.62s;">
+        <div class="hero-meta-item">
+          <span class="hero-meta-val">60–120€</span>
+          <span class="hero-meta-lbl" data-lang="lv">Cena par procedūru</span>
+          <span class="hero-meta-lbl" data-lang="ru">Стоимость процедуры</span>
+        </div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-val">3</span>
+          <span class="hero-meta-lbl" data-lang="lv">Terapijas veidi</span>
+          <span class="hero-meta-lbl" data-lang="ru">Вида терапии</span>
+        </div>
+        <div class="hero-meta-sep"></div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-val">10+</span>
+          <span class="hero-meta-lbl" data-lang="lv">Gadi praksē</span>
+          <span class="hero-meta-lbl" data-lang="ru">Лет практики</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right h-anim-r" style="animation-delay:.18s;">
+      <div class="hero-video-wrap">
+        <video class="hero-img-main" autoplay muted loop playsinline
+          poster="https://ik.imagekit.io/erewhile/Alvis%20Meiers/DSC05613.jpg"
+          aria-label="Fizioterapeits Alvis Meiers darbā">
+          <source src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/alvis_vid.mov" type="video/mp4">
+          <source src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/alvis_vid.mov" type="video/quicktime">
+        </video>
+
+        <!-- floating card top-left -->
+        <div class="hero-overlay-card hero-card-tag h-float" style="animation-delay:.2s;">
+          <div style="font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.6);">Ārstniecības personas</div>
+          <div style="color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;margin-top:3px;font-size:.9rem;letter-spacing:.02em;">ID 25520073901</div>
+        </div>
+
+        <!-- floating stat card -->
+        <div class="hero-overlay-card hero-card-stat h-float" style="animation-delay:.6s;animation-duration:7s;">
+          <div class="stat-prefix" data-lang="lv">Procedūru klāsts</div>
+          <div class="stat-prefix" data-lang="ru">Линейка процедур</div>
+          <div class="stat-up">120€</div>
+          <div class="stat-label" data-lang="lv">Dziļās korekcijas procedūra<br>2 stundas</div>
+          <div class="stat-label" data-lang="ru">Глубокая коррекция<br>2 часа</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MARQUEE ─── -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <!-- repeated twice for seamless loop -->
+    <span class="marquee-item"><span class="dot"></span>Saistaudu masāža</span>
+    <span class="marquee-item"><span class="dot"></span>Klasiskā masāža</span>
+    <span class="marquee-item"><span class="dot"></span>MANNEA terapija</span>
+    <span class="marquee-item"><span class="dot"></span>Muguras sāpes</span>
+    <span class="marquee-item"><span class="dot"></span>Kakla sāpes</span>
+    <span class="marquee-item"><span class="dot"></span>Plecu sāpes</span>
+    <span class="marquee-item"><span class="dot"></span>Fizioterapija Rīgā</span>
+    <span class="marquee-item"><span class="dot"></span>Alvis Meiers</span>
+    <span class="marquee-item"><span class="dot"></span>Saistaudu masāža</span>
+    <span class="marquee-item"><span class="dot"></span>Klasiskā masāža</span>
+    <span class="marquee-item"><span class="dot"></span>MANNEA terapija</span>
+    <span class="marquee-item"><span class="dot"></span>Muguras sāpes</span>
+    <span class="marquee-item"><span class="dot"></span>Kakla sāpes</span>
+    <span class="marquee-item"><span class="dot"></span>Plecu sāpes</span>
+    <span class="marquee-item"><span class="dot"></span>Fizioterapija Rīgā</span>
+    <span class="marquee-item"><span class="dot"></span>Alvis Meiers</span>
+  </div>
+</div>
+
+<main>
+
+<!-- ─── SERVICES ─── -->
+<section class="section services-section-wrap" id="pakalpojumi">
+  <div class="container">
+    <div class="section-head flex reveal">
+      <div>
+        <div class="eyebrow">
+          <span data-lang="lv">Pakalpojumi</span>
+          <span data-lang="ru">Услуги</span>
+        </div>
+        <h2>
+          <span data-lang="lv">Procedūras un terapijas</span>
+          <span data-lang="ru">Процедуры и терапии</span>
+        </h2>
+      </div>
+      <p style="max-width:340px;">
+        <span data-lang="lv">Detalizētu aprakstu var atvērt pie katras procedūras.</span>
+        <span data-lang="ru">Подробное описание можно открыть у каждой процедуры.</span>
+      </p>
+    </div>
+
+    <div class="services-grid reveal scale-in">
+      <!-- Card 1 -->
+      <article class="service-card">
+        <div style="display:flex;justify-content:space-between;align-items:start;">
+          <span class="service-num">01</span>
+          <span class="service-tag" data-lang="lv">Saistaudu terapija</span>
+          <span class="service-tag" data-lang="ru">Терапия соединит. ткани</span>
+        </div>
+        <h3>
+          <span data-lang="lv">Saistaudu masāža</span>
+          <span data-lang="ru">Массаж соединит. ткани</span>
+        </h3>
+        <p style="font-size:.9rem;">
+          <span data-lang="lv">Reflektorā metode, kas iedarbojas uz ādas, zemādas un fasciju slāņiem.</span>
+          <span data-lang="ru">Рефлекторный метод, воздействующий на кожу, подкожные и фасциальные слои.</span>
+        </p>
+        <ul class="service-list">
+          <li data-lang="lv">Mazina hroniskas sāpes un stīvumu</li>
+          <li data-lang="ru">Снижает хроническую боль и скованность</li>
+          <li data-lang="lv">Uzlabo limfas atteci un audu elastību</li>
+          <li data-lang="ru">Улучшает лимфоотток и эластичность тканей</li>
+          <li data-lang="lv">Atbalsta veģetatīvo nervu sistēmu</li>
+          <li data-lang="ru">Поддерживает вегетативную нервную систему</li>
+        </ul>
+        <button class="service-learn" data-modal-target="modal-saistaudi">
+          <span data-lang="lv">Uzzināt vairāk →</span>
+          <span data-lang="ru">Узнать больше →</span>
+        </button>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="service-card">
+        <div style="display:flex;justify-content:space-between;align-items:start;">
+          <span class="service-num">02</span>
+          <span class="service-tag" data-lang="lv">2 stundu procedūra</span>
+          <span class="service-tag" data-lang="ru">Процедура 2 часа</span>
+        </div>
+        <h3>
+          <span data-lang="lv">Dziļās korekcijas procedūra</span>
+          <span data-lang="ru">Процедура глубокой коррекции</span>
+        </h3>
+        <p style="font-size:.9rem;">
+          <span data-lang="lv">Saistaudu masāža, klasiskā masāža un reflekso zonu apstrāde vienā sesijā.</span>
+          <span data-lang="ru">Массаж соединительной ткани, классический массаж и обработка рефлекторных зон в одном сеансе.</span>
+        </p>
+        <ul class="service-list">
+          <li data-lang="lv">30 min – saistaudu masāža</li>
+          <li data-lang="ru">30 мин – массаж соединит. ткани</li>
+          <li data-lang="lv">60 min – klasiskā masāža</li>
+          <li data-lang="ru">60 мин – классический массаж</li>
+          <li data-lang="lv">30 min – reflekso punktu harmonizācija</li>
+          <li data-lang="ru">30 мин – гармонизация рефлекторных точек</li>
+        </ul>
+        <button class="service-learn" data-modal-target="modal-2h">
+          <span data-lang="lv">Uzzināt vairāk →</span>
+          <span data-lang="ru">Узнать больше →</span>
+        </button>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="service-card">
+        <div style="display:flex;justify-content:space-between;align-items:start;">
+          <span class="service-num">03</span>
+          <span class="service-tag">MANNEA</span>
+        </div>
+        <h3>
+          <span data-lang="lv">MANNEA terapija</span>
+          <span data-lang="ru">MANNEA терапия</span>
+        </h3>
+        <p style="font-size:.9rem;">
+          <span data-lang="lv">Integratīva metode, kas strādā ar refleksajiem punktiem, nervu sistēmu un iekšējiem orgāniem.</span>
+          <span data-lang="ru">Интегративный метод, работающий с рефлекторными точками, нервной системой и внутренними органами.</span>
+        </p>
+        <ul class="service-list">
+          <li data-lang="lv">Hormonālās un nervu sistēmas atbalsts</li>
+          <li data-lang="ru">Поддержка гормональной и нервной системы</li>
+          <li data-lang="lv">Piemērota hroniskiem simptomiem</li>
+          <li data-lang="ru">Подходит при хронических симптомах</li>
+          <li data-lang="lv">Pieejama pieaugušajiem un bērniem</li>
+          <li data-lang="ru">Доступна для взрослых и детей</li>
+        </ul>
+        <button class="service-learn" data-modal-target="modal-manea">
+          <span data-lang="lv">Uzzināt vairāk →</span>
+          <span data-lang="ru">Узнать больше →</span>
+        </button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA after services ─── -->
+<div class="cta-strip services-section-wrap">
+  <div class="container">
+    <div class="cta-strip-inner">
+      <div class="cta-strip-text">
+        <strong>
+          <span data-lang="lv">Gatavs sākt?</span>
+          <span data-lang="ru">Готовы начать?</span>
+        </strong>
+        <p>
+          <span data-lang="lv">Pieraksts notiek iepriekš — vietu skaits ir ierobežots.</span>
+          <span data-lang="ru">Запись только предварительная — количество мест ограничено.</span>
+        </p>
+      </div>
+      <div class="cta-strip-btns">
+        <a class="btn btn-accent" href="#pieteikties">
+          <span data-lang="lv">Rezervēt laiku →</span>
+          <span data-lang="ru">Записаться →</span>
+        </a>
+        <a class="btn btn-ghost" href="tel:+37129179767">+371 29179767</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PHOTO SECTION ─── -->
+<div class="photo-section">
+  <div class="container">
+    <div class="photo-grid">
+      <!-- Tall vertical – close up hands on back -->
+      <div class="photo-item tall reveal from-left">
+        <img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/DSC05596.jpg"
+             alt="Ārstnieciskā masāža – rokas un mugura"
+             loading="lazy">
+      </div>
+      <!-- Horizontal close up -->
+      <div class="photo-item" style="grid-column:span 2;" class="reveal">
+        <img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/DSC05600.jpg"
+             alt="Masāža close-up horizontāls"
+             loading="lazy" style="min-height:260px;">
+      </div>
+      <!-- Neck close-up vertical -->
+      <div class="photo-item tall reveal from-right">
+        <img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/DSC05603.jpg"
+             alt="Kakla masāža – close-up"
+             loading="lazy">
+      </div>
+      <!-- Master face visible -->
+      <div class="photo-item reveal">
+        <img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/DSC05616.jpg"
+             alt="Fizioterapeits darbā"
+             loading="lazy">
+      </div>
+      <!-- Photo -->
+      <div class="photo-item reveal">
+        <img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/DSC05621.jpg"
+             alt="Fizioterapeits Alvis Meiers"
+             loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ABOUT ─── -->
+<section class="section" id="par-specialistu" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">
+        <span data-lang="lv">Par speciālistu</span>
+        <span data-lang="ru">О специалисте</span>
+      </div>
+      <h2 data-lang="lv">Alvis <em style="font-style:italic;">Meiers</em></h2>
+      <h2 data-lang="ru">Алвис <em style="font-style:italic;">Мейерс</em></h2>
+    </div>
+
+    <div class="about-layout reveal scale-in">
+      <div class="about-photo-col">
+        <img src="https://res.cloudinary.com/da4ctmwz5/image/upload/v1775568957/DSC05628_bj6jk7.jpg"
+             alt="Fizioterapeits Alvis Meiers" loading="lazy">
+        <div class="about-photo-badge">
+          <div class="about-photo-badge-icon">A</div>
+          <div>
+            <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:.95rem;" data-lang="lv">Alvis Meiers</div>
+            <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:.95rem;" data-lang="ru">Алвис Мейерс</div>
+            <div style="font-size:.78rem;color:var(--muted);" data-lang="lv">Fizioterapeits · Rīgā</div>
+            <div style="font-size:.78rem;color:var(--muted);" data-lang="ru">Физиотерапевт · Рига</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text-col">
+        <div class="eyebrow">
+          <span data-lang="lv">Fizioterapeits · Ārstnieciskās masāžas speciālists</span>
+          <span data-lang="ru">Физиотерапевт · Специалист по лечебному массажу</span>
+        </div>
+        <p data-lang="lv">Alvis Meiers apvieno ārstniecisku pieeju ar individuāli pielāgotu terapiju. Darbs nav vērsts tikai uz relaksāciju – galvenais mērķis ir reāla ietekme uz saspringumu, kustību ierobežojumiem un ķermeņa līdzsvaru.</p>
+        <p data-lang="ru">Алвис Мейерс сочетает лечебный подход с индивидуально подобранной терапией. Работа направлена не только на расслабление, но и на реальное воздействие на напряжение, ограничения движений и восстановление баланса тела.</p>
+        <p data-lang="lv">Katrā procedūrā tiek izmantota klasiskā masāža, saistaudu tehnikas un reflektoro zonu apstrāde – lai palīdzētu mazināt hronisku spriedzi un atgūt kustību brīvību.</p>
+        <p data-lang="ru">В каждой процедуре применяется классический массаж, техники соединительной ткани и обработка рефлекторных зон — для снижения хронического напряжения и восстановления свободы движений.</p>
+        <p data-lang="lv">Katrs apmeklējums tiek pielāgots konkrētajam cilvēkam un viņa pašsajūtai.</p>
+        <p data-lang="ru">Каждое посещение адаптируется под конкретного человека и его самочувствие.</p>
+
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="about-stat-val">3</div>
+            <div class="about-stat-lbl" data-lang="lv">Terapijas metodes</div>
+            <div class="about-stat-lbl" data-lang="ru">Метода терапии</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val">60–120€</div>
+            <div class="about-stat-lbl" data-lang="lv">Procedūru cenas</div>
+            <div class="about-stat-lbl" data-lang="ru">Стоимость процедур</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val">Rīgā</div>
+            <div class="about-stat-lbl" data-lang="lv">Iepriekšējs pieraksts</div>
+            <div class="about-stat-lbl" data-lang="ru">Предварительная запись</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val">↑25%</div>
+            <div class="about-stat-lbl" data-lang="lv">Atlaide bērniem</div>
+            <div class="about-stat-lbl" data-lang="ru">Скидка детям</div>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn btn-ghost" data-modal-target="modal-certificates">
+            <span data-lang="lv">Apskatīt sertifikātus</span>
+            <span data-lang="ru">Посмотреть сертификаты</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PRICES ─── -->
+<section class="section" id="cenas" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-head flex reveal">
+      <div>
+        <div class="eyebrow">
+          <span data-lang="lv">Cenas</span>
+          <span data-lang="ru">Цены</span>
+        </div>
+        <h2>
+          <span data-lang="lv">Pakalpojumu klāsts</span>
+          <span data-lang="ru">Линейка услуг</span>
+        </h2>
+      </div>
+      <p style="max-width:320px;">
+        <span data-lang="lv">Strukturētas pēc ilguma un terapeitiskā mērķa.</span>
+        <span data-lang="ru">Структурированы по длительности и терапевтической цели.</span>
+      </p>
+    </div>
+
+    <div class="prices-grid">
+      <article class="price-card reveal">
+        <div>
+          <div class="price-badge" data-lang="lv">90 min</div>
+          <div class="price-badge" data-lang="ru">90 мин</div>
+        </div>
+        <div class="price-header">
+          <h3>
+            <span data-lang="lv">Saistaudu + klasiskā masāža</span>
+            <span data-lang="ru">Массаж соединит. ткани + классический</span>
+          </h3>
+          <div>
+            <div class="price-amount">90€</div>
+          </div>
+        </div>
+        <ul class="price-list">
+          <li data-lang="lv">Kakls un apkakles zona</li>
+          <li data-lang="ru">Шея и воротниковая зона</li>
+          <li data-lang="lv">Mugura un sēžas zona</li>
+          <li data-lang="ru">Спина и ягодичная зона</li>
+          <li data-lang="lv">Kājas</li>
+          <li data-lang="ru">Ноги</li>
+          <li data-lang="lv">Galvas reflektoro punktu apstrāde</li>
+          <li data-lang="ru">Обработка рефлекторных точек головы</li>
+        </ul>
+      </article>
+
+      <article class="price-card featured reveal">
+        <div>
+          <div class="price-badge" style="background:rgba(232,97,42,.2);" data-lang="lv">2 stundas · Tikai pieaugušajiem</div>
+          <div class="price-badge" style="background:rgba(232,97,42,.2);" data-lang="ru">2 часа · Только для взрослых</div>
+        </div>
+        <div class="price-header">
+          <h3>
+            <span data-lang="lv">Dziļās korekcijas procedūra</span>
+            <span data-lang="ru">Процедура глубокой коррекции</span>
+          </h3>
+          <div>
+            <div class="price-amount">120€</div>
+          </div>
+        </div>
+        <ul class="price-list">
+          <li data-lang="lv">Saistaudu masāža + klasiskā masāža</li>
+          <li data-lang="ru">Массаж соединит. ткани + классический</li>
+          <li data-lang="lv">Mugura, kakls, sēžas zona un kājas</li>
+          <li data-lang="ru">Спина, шея, ягодичная зона и ноги</li>
+          <li data-lang="lv">Galvas un sejas reflektoro punktu apstrāde</li>
+          <li data-lang="ru">Рефлекторные точки головы и лица</li>
+        </ul>
+      </article>
+
+      <article class="price-card reveal">
+        <div>
+          <div class="price-badge" data-lang="lv">60 min</div>
+          <div class="price-badge" data-lang="ru">60 мин</div>
+        </div>
+        <div class="price-header">
+          <h3>
+            <span data-lang="lv">Muguras terapija</span>
+            <span data-lang="ru">Терапия спины</span>
+          </h3>
+          <div>
+            <div class="price-amount">60€</div>
+          </div>
+        </div>
+        <ul class="price-list">
+          <li data-lang="lv">Kakls un apkakles zona</li>
+          <li data-lang="ru">Шея и воротниковая зона</li>
+          <li data-lang="lv">Mugura</li>
+          <li data-lang="ru">Спина</li>
+          <li data-lang="lv">Sēžas zona (pēc nepieciešamības)</li>
+          <li data-lang="ru">Ягодичная зона (по необходимости)</li>
+        </ul>
+      </article>
+
+      <article class="price-card reveal">
+        <div>
+          <div class="price-badge" data-lang="lv">6 reizes</div>
+          <div class="price-badge" data-lang="ru">6 сеансов</div>
+        </div>
+        <div class="price-header">
+          <h3>
+            <span data-lang="lv">Procedūru kurss</span>
+            <span data-lang="ru">Курс процедур</span>
+          </h3>
+          <div>
+            <div class="price-amount">100€</div>
+            <div class="price-period" data-lang="lv">par procedūru</div>
+            <div class="price-period" data-lang="ru">за процедуру</div>
+          </div>
+        </div>
+        <ul class="price-list">
+          <li data-lang="lv">1.–4. – saistaudu + klasiskā masāža, galvas apstrāde</li>
+          <li data-lang="ru">1–4 – массаж соединит. ткани + классический, обработка головы</li>
+          <li data-lang="lv">5.–6. – masāža visam ķermenim + sejas un galvas apstrāde</li>
+          <li data-lang="ru">5–6 – массаж всего тела + обработка лица и головы</li>
+        </ul>
+      </article>
+
+      <article class="price-card reveal">
+        <div>
+          <div class="price-badge" data-lang="lv">Līdz 60 min</div>
+          <div class="price-badge" data-lang="ru">До 60 мин</div>
+        </div>
+        <div class="price-header">
+          <h3>MANNEA terapija</h3>
+          <div>
+            <div class="price-amount">90€</div>
+            <div class="price-period" data-lang="lv">bērniem 75€</div>
+            <div class="price-period" data-lang="ru">детям 75€</div>
+          </div>
+        </div>
+        <ul class="price-list">
+          <li data-lang="lv">Pieaugušajiem: 90 EUR</li>
+          <li data-lang="ru">Взрослым: 90 EUR</li>
+          <li data-lang="lv">Bērniem: 75 EUR</li>
+          <li data-lang="ru">Детям: 75 EUR</li>
+        </ul>
+      </article>
+
+      <article class="price-card reveal">
+        <div>
+          <div class="price-badge" data-lang="lv">90 min</div>
+          <div class="price-badge" data-lang="ru">90 мин</div>
+        </div>
+        <div class="price-header">
+          <h3>
+            <span data-lang="lv">Klasiskā masāža (viss ķermenis)</span>
+            <span data-lang="ru">Классический массаж (всё тело)</span>
+          </h3>
+          <div>
+            <div class="price-amount">90€</div>
+          </div>
+        </div>
+        <ul class="price-list">
+          <li data-lang="lv">Mugura, pleci un kakls</li>
+          <li data-lang="ru">Спина, плечи и шея</li>
+          <li data-lang="lv">Rokas un kājas</li>
+          <li data-lang="ru">Руки и ноги</li>
+          <li data-lang="lv">Sēžas zona</li>
+          <li data-lang="ru">Ягодичная зона</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA after prices ─── -->
+<div class="cta-strip" style="background:var(--bg);">
+  <div class="container">
+    <div class="cta-strip-inner">
+      <div class="cta-strip-text">
+        <strong>
+          <span data-lang="lv">Izvēlies sev piemērotāko procedūru</span>
+          <span data-lang="ru">Выберите подходящую процедуру</span>
+        </strong>
+        <p>
+          <span data-lang="lv">Šaubies? Var pajautāt — telefoniski vai Instagram.</span>
+          <span data-lang="ru">Сомневаетесь? Можно спросить — по телефону или Instagram.</span>
+        </p>
+      </div>
+      <div class="cta-strip-btns">
+        <a class="btn btn-primary" href="#pieteikties">
+          <span data-lang="lv">Pieteikties →</span>
+          <span data-lang="ru">Записаться →</span>
+        </a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/alvis.promassage" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── MANNEA ─── -->
+<section class="section mannea-section" id="manea">
+  <div class="container">
+    <div class="mannea-layout">
+      <div class="mannea-left reveal from-left">
+        <div>
+          <img class="mannea-logo"
+               src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/logo%20mannea.png"
+               alt="MANNEA terapija" loading="lazy">
+        </div>
+        <div>
+          <div class="eyebrow">MANNEA</div>
+          <h2>
+            <span data-lang="lv">Integratīva pieeja organisma līdzsvaram</span>
+            <span data-lang="ru">Интегративный подход к балансу организма</span>
+          </h2>
+        </div>
+        <p data-lang="lv">Tā nav relaksācija. Šī metode aktivizē organisma sistēmas – hormonālo, gremošanas, nervu – un atjauno to līdzsvaru. Piemērota situācijām, kad ķermenim nepietiek tikai ar atpūtu.</p>
+        <p data-lang="ru">Это не расслабление. Метод активирует системы организма — гормональную, пищеварительную, нервную — и восстанавливает их баланс. Подходит, когда телу уже недостаточно просто отдыха.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button class="btn btn-primary" data-modal-target="modal-manea">
+            <span data-lang="lv">Pilns apraksts</span>
+            <span data-lang="ru">Полное описание</span>
+          </button>
+          <a class="btn btn-ghost" href="#pieteikties">
+            <span data-lang="lv">Pierakstīties</span>
+            <span data-lang="ru">Записаться</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mannea-right reveal from-right">
+        <div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;" data-lang="lv">Kam var palīdzēt</p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;" data-lang="ru">Чем может помочь</p>
+        </div>
+        <div class="mannea-tag-grid">
+          <span class="mannea-tag" data-lang="lv">Menstruāciju traucējumi</span>
+          <span class="mannea-tag" data-lang="ru">Нарушения менструального цикла</span>
+          <span class="mannea-tag" data-lang="lv">PCOS · Endometrioze</span>
+          <span class="mannea-tag" data-lang="ru">СПКЯ · Эндометриоз</span>
+          <span class="mannea-tag" data-lang="lv">Hormonālais disbalanss</span>
+          <span class="mannea-tag" data-lang="ru">Гормональный дисбаланс</span>
+          <span class="mannea-tag" data-lang="lv">Auglības jautājumi</span>
+          <span class="mannea-tag" data-lang="ru">Вопросы фертильности</span>
+          <span class="mannea-tag" data-lang="lv">Gremošanas sistēma</span>
+          <span class="mannea-tag" data-lang="ru">Пищеварительная система</span>
+          <span class="mannea-tag" data-lang="lv">Stress un izsīkums</span>
+          <span class="mannea-tag" data-lang="ru">Стресс и истощение</span>
+          <span class="mannea-tag" data-lang="lv">Miega traucējumi</span>
+          <span class="mannea-tag" data-lang="ru">Нарушения сна</span>
+          <span class="mannea-tag" data-lang="lv">Muguras sāpes</span>
+          <span class="mannea-tag" data-lang="ru">Боли в спине</span>
+          <span class="mannea-tag" data-lang="lv">Klimaktēriskais periods</span>
+          <span class="mannea-tag" data-lang="ru">Климактерический период</span>
+          <span class="mannea-tag" data-lang="lv">Bērniem pieejama</span>
+          <span class="mannea-tag" data-lang="ru">Доступна детям</span>
+          <span class="mannea-tag" data-lang="lv">Vairogdziedzeris</span>
+          <span class="mannea-tag" data-lang="ru">Щитовидная железа</span>
+          <span class="mannea-tag" data-lang="lv">Grūtniecība</span>
+          <span class="mannea-tag" data-lang="ru">Беременность</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA after MANNEA ─── -->
+<div class="cta-strip mannea-section" style="border-top:none; padding-top:0; padding-bottom:56px;">
+  <div class="container">
+    <div class="cta-strip-inner">
+      <div class="cta-strip-text">
+        <strong style="color:#fff;">
+          <span data-lang="lv">Interesē MANNEA terapija?</span>
+          <span data-lang="ru">Интересует MANNEA терапия?</span>
+        </strong>
+        <p style="color:rgba(255,255,255,.55);">
+          <span data-lang="lv">Pieaugušajiem 90€ · Bērniem 75€ · Līdz 60 min</span>
+          <span data-lang="ru">Взрослым 90€ · Детям 75€ · До 60 мин</span>
+        </p>
+      </div>
+      <div class="cta-strip-btns">
+        <a class="btn" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.15);" href="tel:+37129179767">+371 29179767</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FAQ ─── -->
+<section class="section" id="faq" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">
+        <span data-lang="lv">Biežāk uzdotie jautājumi</span>
+        <span data-lang="ru">Часто задаваемые вопросы</span>
+      </div>
+      <h2>
+        <span data-lang="lv">Pirms pirmās vizītes</span>
+        <span data-lang="ru">Перед первым визитом</span>
+      </h2>
+    </div>
+
+    <div class="faq-list-items reveal scale-in">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span data-lang="lv">Cik maksā procedūras?</span>
+          <span data-lang="ru">Сколько стоят процедуры?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <p data-lang="lv">Procedūru cenas ir no 60 EUR līdz 120 EUR atkarībā no ilguma un veida. MANNEA terapija pieaugušajiem – 90 EUR, bērniem – 75 EUR (–25%).</p>
+          <p data-lang="ru">Стоимость процедур – от 60 EUR до 120 EUR в зависимости от длительности и вида. MANNEA терапия для взрослых – 90 EUR, для детей – 75 EUR (–25%).</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span data-lang="lv">Kādām situācijām tas ir piemērots?</span>
+          <span data-lang="ru">Каким ситуациям это подходит?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <p data-lang="lv">Muguras, kakla un plecu sāpēm, hroniskai spriedzei un stīvumam, kustību ierobežojumiem un nogurumam. MANNEA terapija ir piemērota arī plašākam simptomam lokam.</p>
+          <p data-lang="ru">Боли в спине, шее и плечах, хроническое напряжение и скованность, ограничения движений и усталость. MANNEA терапия подходит также для более широкого спектра симптомов.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span data-lang="lv">Vai nepieciešams iepriekšējs pieraksts?</span>
+          <span data-lang="ru">Нужна ли предварительная запись?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <p data-lang="lv">Jā, pieraksts notiek iepriekš. Tas ļauj nodrošināt individuālu pieeju un mierīgu terapijas vidi katram klientam.</p>
+          <p data-lang="ru">Да, запись осуществляется заранее. Это позволяет обеспечить индивидуальный подход и спокойную терапевтическую обстановку.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span data-lang="lv">Vai MANNEA terapija ir piemērota bērniem?</span>
+          <span data-lang="ru">Подходит ли MANNEA терапия детям?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <p data-lang="lv">Jā, MANNEA terapija ir pieejama arī bērniem ar 25% atlaidi (75 EUR).</p>
+          <p data-lang="ru">Да, MANNEA терапия доступна детям со скидкой 25% (75 EUR).</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span data-lang="lv">Kā pieteikties?</span>
+          <span data-lang="ru">Как записаться?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <p data-lang="lv">Telefoniski: +371 29179767, Instagram: @alvis.promassage, vai aizpildot formu mājaslapā.</p>
+          <p data-lang="ru">По телефону: +371 29179767, Instagram: @alvis.promassage, или через форму на сайте.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section class="section" id="kontakti" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">
+        <span data-lang="lv">Kontakti</span>
+        <span data-lang="ru">Контакты</span>
+      </div>
+      <h2>
+        <span data-lang="lv">Pieraksts un saziņa</span>
+        <span data-lang="ru">Запись и связь</span>
+      </h2>
+    </div>
+
+    <div class="contact-layout reveal scale-in" id="pieteikties">
+      <div class="contact-left">
+        <div>
+          <h3 data-lang="lv">Sazināties</h3>
+          <h3 data-lang="ru">Связаться</h3>
+          <p style="margin-top:10px;" data-lang="lv">Pieraksts notiek iepriekš. Vietu skaits ir ierobežots.</p>
+          <p style="margin-top:10px;" data-lang="ru">Запись только предварительная. Количество мест ограничено.</p>
+        </div>
+        <div class="contact-links">
+          <a class="contact-link" href="tel:+37129179767">
+            <span data-lang="lv">Tālrunis</span>
+            <span data-lang="ru">Телефон</span>
+            <span>+371 29179767</span>
+          </a>
+          <a class="contact-link" href="https://www.instagram.com/alvis.promassage" target="_blank" rel="noopener noreferrer">
+            <span>Instagram</span>
+            <span>@alvis.promassage</span>
+          </a>
+        </div>
+        <div style="margin-top:auto;">
+          <div style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px;">Rīga, Latvija</div>
+          <img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/DSC05648.jpg"
+               alt="Darba vide" loading="lazy"
+               style="width:100%;border-radius:var(--radius-sm);aspect-ratio:4/3;object-fit:cover;display:block;opacity:.7;">
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <h3 data-lang="lv">Pieteikuma forma</h3>
+        <h3 data-lang="ru">Форма записи</h3>
+        <p data-lang="lv">Aizpildi formu, lai pieteiktos vai uzdotu jautājumu.</p>
+        <p data-lang="ru">Заполните форму, чтобы записаться или задать вопрос.</p>
+
+        <form id="contact-form">
+          <div class="field">
+            <label data-lang="lv">Vārds</label>
+            <label data-lang="ru">Имя</label>
+            <input type="text" name="name" data-placeholder-lv="Vārds" data-placeholder-ru="Имя" placeholder="Vārds" autocomplete="given-name" />
+          </div>
+          <div class="field">
+            <label data-lang="lv">Tālrunis</label>
+            <label data-lang="ru">Телефон</label>
+            <input type="tel" name="phone" placeholder="+371 29 000 000" autocomplete="tel" />
+          </div>
+
+          <!-- Service type chips -->
+          <div class="field">
+            <label data-lang="lv">Procedūras veids</label>
+            <label data-lang="ru">Вид процедуры</label>
+            <div class="chip-group" role="group">
+              <label class="chip">
+                <input type="radio" name="service" value="saistaudu" />
+                <span data-lang="lv">Saistaudu masāža</span>
+                <span data-lang="ru">Массаж соед. ткани</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="service" value="klasiska" />
+                <span data-lang="lv">Klasiskā masāža</span>
+                <span data-lang="ru">Классический массаж</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="service" value="2h" />
+                <span data-lang="lv">2h procedūra</span>
+                <span data-lang="ru">Процедура 2ч</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="service" value="mannea" />
+                <span>MANNEA</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="service" value="kurss" />
+                <span data-lang="lv">Kurss (6×)</span>
+                <span data-lang="ru">Курс (6×)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Focus zone chips -->
+          <div class="field">
+            <label data-lang="lv">Problēmzona</label>
+            <label data-lang="ru">Проблемная зона</label>
+            <div class="chip-group" role="group">
+              <label class="chip">
+                <input type="checkbox" name="zone" value="mugura" />
+                <span data-lang="lv">Mugura</span>
+                <span data-lang="ru">Спина</span>
+              </label>
+              <label class="chip">
+                <input type="checkbox" name="zone" value="kakls" />
+                <span data-lang="lv">Kakls / pleci</span>
+                <span data-lang="ru">Шея / плечи</span>
+              </label>
+              <label class="chip">
+                <input type="checkbox" name="zone" value="kajas" />
+                <span data-lang="lv">Kājas</span>
+                <span data-lang="ru">Ноги</span>
+              </label>
+              <label class="chip">
+                <input type="checkbox" name="zone" value="viss" />
+                <span data-lang="lv">Viss ķermenis</span>
+                <span data-lang="ru">Всё тело</span>
+              </label>
+              <label class="chip">
+                <input type="checkbox" name="zone" value="cits" />
+                <span data-lang="lv">Cits</span>
+                <span data-lang="ru">Другое</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Adult / child toggle -->
+          <div class="field">
+            <label data-lang="lv">Klients</label>
+            <label data-lang="ru">Клиент</label>
+            <div class="toggle-group" role="group">
+              <label class="toggle-opt">
+                <input type="radio" name="agegroup" value="adult" checked />
+                <span data-lang="lv">Pieaugušais</span>
+                <span data-lang="ru">Взрослый</span>
+              </label>
+              <label class="toggle-opt">
+                <input type="radio" name="agegroup" value="child" />
+                <span data-lang="lv">Bērns (līdz 16 g.)</span>
+                <span data-lang="ru">Ребёнок (до 16 л.)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label data-lang="lv">Ziņa (nav obligāti)</label>
+            <label data-lang="ru">Сообщение (необязательно)</label>
+            <textarea name="message" rows="3" placeholder="…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-accent" style="width:100%;height:56px;">
+            <span data-lang="lv">Nosūtīt pieteikumu →</span>
+            <span data-lang="ru">Отправить заявку →</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand" data-lang="lv">Alvis Meiers</div>
+        <div class="footer-brand" data-lang="ru">Алвис Мейерс</div>
+        <div class="footer-sub" data-lang="lv">Fizioterapeits Rīgā · Ārstnieciskā masāža un MANNEA terapija</div>
+        <div class="footer-sub" data-lang="ru">Физиотерапевт в Риге · Лечебный массаж и MANNEA терапия</div>
+      </div>
+      <div class="footer-btns">
+        <a class="btn btn-footer-ghost" href="tel:+37129179767" style="height:44px;font-size:.85rem;">+371 29179767</a>
+        <a class="btn btn-accent" href="https://www.instagram.com/alvis.promassage" target="_blank" rel="noopener noreferrer" style="height:44px;font-size:.85rem;">Instagram →</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── MODALS ─── -->
+
+<!-- Saistaudu -->
+<div class="modal" id="modal-saistaudi" aria-hidden="true">
+  <div class="modal-dialog">
+    <button class="modal-close" data-close-modal aria-label="Aizvērt">×</button>
+    <div class="modal-body">
+      <div>
+        <div class="eyebrow">
+          <span data-lang="lv">Pilns apraksts</span>
+          <span data-lang="ru">Полное описание</span>
+        </div>
+        <h3>
+          <span data-lang="lv">Saistaudu masāža – ko tā dod?</span>
+          <span data-lang="ru">Массаж соединительной ткани – что он даёт?</span>
+        </h3>
+      </div>
+      <p data-lang="lv">Saistaudu masāža ir manuālās terapijas metode ar reflektoru iedarbību uz organismu. Atšķirībā no muskuļu masāžas, terapeits strādā ar ādas, zemādas un fasciju slāņiem.</p>
+      <p data-lang="ru">Массаж соединительной ткани — метод мануальной терапии с рефлекторным воздействием на организм. В отличие от мышечного массажа, терапевт работает с кожными, подкожными и фасциальными слоями.</p>
+      <div class="modal-section">
+        <h4 data-lang="lv">Kāpēc izvēlēties saistaudu masāžu?</h4>
+        <h4 data-lang="ru">Почему выбрать массаж соединительной ткани?</h4>
+        <ul class="modal-list">
+          <li data-lang="lv">Reflektorā iedarbība – stimulējot noteiktas zonas, tiek veicināta organisma funkciju aktivizācija</li>
+          <li data-lang="ru">Рефлекторное воздействие – стимуляция определённых зон активизирует функции организма</li>
+          <li data-lang="lv">Struktūras uzlabošana – tiek atbrīvoti audu saaugumi un uzlabota elastība pēc traumām</li>
+          <li data-lang="ru">Улучшение структуры – снятие спаек тканей и восстановление эластичности после травм</li>
+          <li data-lang="lv">Nervu sistēmas līdzsvars – mazinās stress un nogurums</li>
+          <li data-lang="ru">Баланс нервной системы – снижение стресса и усталости</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4 data-lang="lv">Ko Jūs iegūsiet?</h4>
+        <h4 data-lang="ru">Что вы получите?</h4>
+        <ul class="modal-list">
+          <li data-lang="lv">Mazinātas hroniskas sāpes un stīvumu</li>
+          <li data-lang="ru">Снижение хронической боли и скованности</li>
+          <li data-lang="lv">Uzlabotu limfas atteci un mazinātu tūsku</li>
+          <li data-lang="ru">Улучшение лимфооттока и уменьшение отёков</li>
+          <li data-lang="lv">Lielāku kustību amplitūdu un viegluma sajūtu</li>
+          <li data-lang="ru">Большую амплитуду движений и ощущение лёгкости</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2h -->
+<div class="modal" id="modal-2h" aria-hidden="true">
+  <div class="modal-dialog">
+    <button class="modal-close" data-close-modal aria-label="Aizvērt">×</button>
+    <div class="modal-body">
+      <div>
+        <div class="eyebrow">
+          <span data-lang="lv">Padziļinātā procedūra</span>
+          <span data-lang="ru">Углублённая процедура</span>
+        </div>
+        <h3>
+          <span data-lang="lv">Dziļās korekcijas procedūra – 2 stundas</span>
+          <span data-lang="ru">Процедура глубокой коррекции – 2 часа</span>
+        </h3>
+      </div>
+      <p data-lang="lv">Paredzēta tiem, kuri vēlas ne tikai atslābināties, bet risināt hronisku saspringumu cēloņus, uzlabot ķermeņa funkcijas un atjaunot iekšējo līdzsvaru.</p>
+      <p data-lang="ru">Предназначена тем, кто хочет не только расслабиться, но и устранить причины хронического напряжения, улучшить функции тела и восстановить внутренний баланс.</p>
+      <div class="modal-section">
+        <h4 data-lang="lv">Procedūras gaita</h4>
+        <h4 data-lang="ru">Ход процедуры</h4>
+        <ul class="modal-list">
+          <li data-lang="lv"><strong>30 min – Saistaudu masāža:</strong> fasciju atbrīvošana, reflektoro zonu aktivizācija, asinsrites un limfas uzlabošana</li>
+          <li data-lang="ru"><strong>30 мин – Массаж соединит. ткани:</strong> освобождение фасций, активизация рефлекторных зон, улучшение кровообращения и лимфотока</li>
+          <li data-lang="lv"><strong>60 min – Klasiskā masāža:</strong> dziļa muskulatūras apstrāde, sāpju mazināšana, bloku novēršana</li>
+          <li data-lang="ru"><strong>60 мин – Классический массаж:</strong> глубокая проработка мускулатуры, снижение боли, устранение блоков</li>
+          <li data-lang="lv"><strong>30 min – Reflekso zonu apstrāde:</strong> kājas, mugura, seja un galva – noslēgums un harmonizācija</li>
+          <li data-lang="ru"><strong>30 мин – Обработка рефлекторных зон:</strong> ноги, спина, лицо и голова – завершение и гармонизация</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4 data-lang="lv">Kam šī procedūra ir piemērota?</h4>
+        <h4 data-lang="ru">Кому подходит эта процедура?</h4>
+        <ul class="modal-list">
+          <li data-lang="lv">Hroniskām muguras, kakla un plecu sāpēm</li>
+          <li data-lang="ru">При хронических болях в спине, шее и плечах</li>
+          <li data-lang="lv">Stājas uzlabošanai un dziļu muskuļu bloku atbrīvošanai</li>
+          <li data-lang="ru">Для улучшения осанки и снятия глубоких мышечных блоков</li>
+          <li data-lang="lv">Tiem, kas vēlas dziļu efektu un pilnīgu relaksāciju vienā procedūrā</li>
+          <li data-lang="ru">Тем, кто хочет глубокого эффекта и полного расслабления в одной процедуре</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MANNEA -->
+<div class="modal" id="modal-manea" aria-hidden="true">
+  <div class="modal-dialog">
+    <button class="modal-close" data-close-modal aria-label="Aizvērt">×</button>
+    <div class="modal-body">
+      <div>
+        <div class="eyebrow">MANNEA</div>
+        <h3>
+          <span data-lang="lv">MANNEA terapija – pilns apraksts</span>
+          <span data-lang="ru">MANNEA терапия – полное описание</span>
+        </h3>
+      </div>
+      <p data-lang="lv">Ir situācijas, kad ķermenis vairs nespēj kompensēt. MANNEA terapija nav par simptomu nomākšanu – tā aktivizē organisma sistēmas un atjauno to līdzsvaru.</p>
+      <p data-lang="ru">Бывают ситуации, когда организм уже не может компенсировать. MANNEA терапия — это не подавление симптомов, а активизация систем организма и восстановление их баланса.</p>
+      <div class="modal-section">
+        <h4 data-lang="lv">Hormonālā un uroģenitālā sistēma</h4>
+        <h4 data-lang="ru">Гормональная и урогенитальная система</h4>
+        <ul class="modal-list">
+          <li data-lang="lv">Menstruāciju traucējumi, PCOS, endometrioze</li>
+          <li data-lang="ru">Нарушения менструального цикла, СПКЯ, эндометриоз</li>
+          <li data-lang="lv">Miomas, cistas (t.sk. olvados)</li>
+          <li data-lang="ru">Миомы, кисты (в т.ч. в маточных трубах)</li>
+          <li data-lang="lv">Dzemdes vai urīnpūšļa noslīdējums</li>
+          <li data-lang="ru">Опущение матки или мочевого пузыря</li>
+          <li data-lang="lv">Libido samazināšanās</li>
+          <li data-lang="ru">Снижение либидо</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4 data-lang="lv">Auglība un reproduktīvā veselība</h4>
+        <h4 data-lang="ru">Фертильность и репродуктивное здоровье</h4>
+        <ul class="modal-list">
+          <li data-lang="lv">Hormonālais disbalanss (sievietēm un vīriešiem)</li>
+          <li data-lang="ru">Гормональный дисбаланс (у женщин и мужчин)</li>
+          <li data-lang="lv">Olnīcu darbības stimulācija, asinsrite mazajā iegurnī</li>
+          <li data-lang="ru">Стимуляция работы яичников, кровообращение в малом тазу</li>
+          <li data-lang="lv">Prostatas veselība un ietekme uz spermogrammu</li>
+          <li data-lang="ru">Здоровье простаты и влияние на спермограмму</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4 data-lang="lv">Grūtniecība un pēcdzemdību periods</h4>
+        <h4 data-lang="ru">Беременность и послеродовой период</h4>
+        <ul class="modal-list">
+          <li data-lang="lv">Slikta dūša, gestācijas diabēts, muguras sāpes, tūska</li>
+          <li data-lang="ru">Тошнота, гестационный диабет, боли в спине, отёки</li>
+          <li data-lang="lv">Atveseļošanās veicināšana pēc dzemdībām</li>
+          <li data-lang="ru">Поддержка восстановления после родов</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <h4 data-lang="lv">Citas sistēmas</h4>
+        <h4 data-lang="ru">Другие системы</h4>
+        <ul class="modal-list">
+          <li data-lang="lv">Klimaktēriskais periods: karstuma viļņi, miega traucējumi, disbalanss</li>
+          <li data-lang="ru">Климактерический период: приливы, нарушения сна, дисбаланс</li>
+          <li data-lang="lv">Vairogdziedzeris, migrēnas, 2. tipa diabēts (kā papildterapija)</li>
+          <li data-lang="ru">Щитовидная железа, мигрени, диабет 2 типа (как дополнительная терапия)</li>
+          <li data-lang="lv">Gremošanas sistēma: grēmas, aizcietējumi, žults traucējumi</li>
+          <li data-lang="ru">Пищеварительная система: изжога, запоры, нарушения желчеотделения</li>
+          <li data-lang="lv">Stress, izsīkums, depresīvs noskaņojums, miega traucējumi</li>
+          <li data-lang="ru">Стресс, истощение, депрессивное настроение, нарушения сна</li>
+          <li data-lang="lv">Muguras sāpes, išiass, karpālā kanāla sindroms</li>
+          <li data-lang="ru">Боли в спине, ишиас, синдром запястного канала</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Certificates -->
+<div class="modal" id="modal-certificates" aria-hidden="true">
+  <div class="modal-dialog">
+    <button class="modal-close" data-close-modal aria-label="Aizvērt">×</button>
+    <div class="modal-body">
+      <div>
+        <div class="eyebrow">
+          <span data-lang="lv">Sertifikātu galerija</span>
+          <span data-lang="ru">Галерея сертификатов</span>
+        </div>
+        <h3 data-lang="lv">Sertifikāti</h3>
+        <h3 data-lang="ru">Сертификаты</h3>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-item"><img src="PUT_CERT_1.jpg" alt="Sertifikāts 1" loading="lazy"></div>
+        <div class="cert-item"><img src="PUT_CERT_2.jpg" alt="Sertifikāts 2" loading="lazy"></div>
+        <div class="cert-item"><img src="PUT_CERT_3.jpg" alt="Sertifikāts 3" loading="lazy"></div>
+        <div class="cert-item"><img src="PUT_CERT_4.jpg" alt="Sertifikāts 4" loading="lazy"></div>
+        <div class="cert-item"><img src="PUT_CERT_5.jpg" alt="Sertifikāts 5" loading="lazy"></div>
+        <div class="cert-item"><img src="PUT_CERT_6.jpg" alt="Sertifikāts 6" loading="lazy"></div>
+        <div class="cert-item"><img src="PUT_CERT_7.jpg" alt="Sertifikāts 7" loading="lazy"></div>
+        <div class="cert-item"><img src="PUT_CERT_8.jpg" alt="Sertifikāts 8" loading="lazy"></div>
+        <div class="cert-item"><img src="PUT_CERT_9.jpg" alt="Sertifikāts 9" loading="lazy"></div>
+        <div class="cert-item"><img src="PUT_CERT_10.jpg" alt="Sertifikāts 10" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── LANGUAGE SWITCH ───
+const langBtns = document.querySelectorAll('[data-set-lang]');
+langBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.setLang;
+    document.body.className = lang;
+    langBtns.forEach(b => b.classList.toggle('active', b.dataset.setLang === lang));
+    document.documentElement.lang = lang;
+    // Switch placeholders on inputs/textareas
+    document.querySelectorAll('[data-placeholder-lv]').forEach(el => {
+      el.placeholder = el.dataset[`placeholder${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || '';
+    });
+  });
+});
+
+// ─── HERO ENTRANCE ───
+window.addEventListener('DOMContentLoaded', () => {
+  const targets = document.querySelectorAll('.h-anim, .h-anim-l, .h-anim-r');
+  targets.forEach(el => {
+    const delay = el.style.animationDelay || '0s';
+    el.style.animationDelay = delay;
+    el.classList.add('in');
+  });
+});
+
+// ─── SCROLL REVEAL ───
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    // Stagger siblings
+    const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal'));
+    const idx = siblings.indexOf(el);
+    el.style.transitionDelay = `${Math.min(idx * 0.1, 0.3)}s`;
+    el.classList.add('visible');
+    revealObserver.unobserve(el);
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ─── MODALS ───
+document.querySelectorAll('[data-modal-target]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modal = document.getElementById(btn.dataset.modalTarget);
+    if (!modal) return;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.modal-close')?.focus();
+  });
+});
+
+const closeModal = m => {
+  m.classList.remove('active');
+  m.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+};
+
+document.querySelectorAll('[data-close-modal]').forEach(btn => {
+  btn.addEventListener('click', () => closeModal(btn.closest('.modal')));
+});
+document.querySelectorAll('.modal').forEach(m => {
+  m.addEventListener('click', e => { if (e.target === m) closeModal(m); });
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.querySelectorAll('.modal.active').forEach(closeModal);
+});
+
+// ─── FAQ ───
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+</body>
+</html>
