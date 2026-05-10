@@ -843,6 +843,114 @@
       .contact-layout { grid-template-columns: 1fr; }
       .cookie-banner { bottom: 0; border-radius: var(--radius) var(--radius) 0 0; }
     }
+
+    /* ─── MOBILE NAV ─── */
+    .nav-mobile { display: none; align-items: center; gap: 8px; }
+    .nav-mobile-link {
+      padding: 7px 11px;
+      border-radius: var(--radius-xs);
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      background: var(--sage-bg);
+      border: 1px solid var(--line);
+      white-space: nowrap;
+    }
+    .nav-mobile-link:hover { background: var(--sage-pale); color: var(--sage-dark); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-mobile { display: flex; }
+      nav { gap: 10px; }
+      .nav-right { gap: 8px; }
+      .nav-right .btn { padding: 0 14px; font-size: .8rem; height: 40px; }
+      .lang-toggle { padding: 2px; }
+      .lang-btn { padding: 4px 10px; font-size: .72rem; }
+    }
+    @media (max-width: 400px) {
+      .nav-mobile { gap: 5px; }
+      .nav-mobile-link { padding: 6px 9px; font-size: .75rem; }
+    }
+    /* ─── GIFT CARD ─── */
+    .gift-card-section { background: var(--surface); }
+    .gift-card-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .gift-card-visual {
+      position: relative;
+      background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 48px 40px;
+    }
+    .gift-card-placeholder {
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 16/10;
+      background: rgba(255,255,255,.14);
+      border: 2px dashed rgba(255,255,255,.35);
+      border-radius: var(--radius-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: rgba(255,255,255,.65);
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-align: center;
+    }
+    .gift-card-placeholder-icon { font-size: 2.2rem; opacity: .6; }
+    .gift-card-badge {
+      background: var(--warm-tan);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 999px;
+    }
+    .gift-card-content {
+      padding: 52px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 22px;
+      background: var(--card);
+    }
+    .gift-card-price {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+    .gift-card-price-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 3rem;
+      color: var(--sage-dark);
+      line-height: 1;
+    }
+    .gift-card-price-cur {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--sage);
+    }
+    @media (max-width: 960px) {
+      .gift-card-layout { grid-template-columns: 1fr; }
+      .gift-card-visual { min-height: 220px; padding: 36px 24px; }
+      .gift-card-content { padding: 32px 22px; }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -902,6 +1010,13 @@
         <a href="#par-specialistu" data-lang="ru">О специалисте</a>
         <a href="#faq" data-lang="ru">Вопросы</a>
         <a href="#kontakti" data-lang="ru">Контакты</a>
+      </div>
+      <!-- Mobile-only compact nav links -->
+      <div class="nav-mobile" role="navigation" aria-label="Mobile navigation">
+        <a class="nav-mobile-link" href="#pakalpojumi" data-lang="lv">Procedūras</a>
+        <a class="nav-mobile-link" href="#manea" data-lang="lv">MANNEA</a>
+        <a class="nav-mobile-link" href="#pakalpojumi" data-lang="ru">Процедуры</a>
+        <a class="nav-mobile-link" href="#manea" data-lang="ru">MANNEA</a>
       </div>
       <div class="nav-right">
         <div class="lang-toggle">
@@ -1215,6 +1330,81 @@
         </button>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<!-- ─── GIFT CARD ─── -->
+<section class="section gift-card-section" id="davanu-karte">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">
+        <span data-lang="lv">Dāvanu karte</span>
+        <span data-lang="ru">Подарочная карта</span>
+      </div>
+      <h2>
+        <span data-lang="lv">Dāvini veselību</span>
+        <span data-lang="ru">Подарите здоровье</span>
+      </h2>
+      <p style="margin-top:10px;max-width:480px;">
+        <span data-lang="lv">Pasūti sertifikātu sev vai tuviem cilvēkiem — uz masāžas pakalpojumiem 100 EUR vērtībā.</span>
+        <span data-lang="ru">Закажите сертификат себе или близким — на услуги массажа на сумму 100 EUR.</span>
+      </p>
+    </div>
+
+    <div class="gift-card-layout reveal scale-in">
+      <!-- Visual side -->
+      <div class="gift-card-visual">
+        <div class="gift-card-placeholder">
+          <span class="gift-card-placeholder-icon">🎁</span>
+          <span data-lang="lv">Dāvanu karte<br>ar foto</span>
+          <span data-lang="ru">Подарочная карта<br>с фото</span>
+        </div>
+        <span class="gift-card-badge" data-lang="lv">Dāvanu sertifikāts</span>
+        <span class="gift-card-badge" data-lang="ru">Подарочный сертификат</span>
+      </div>
+
+      <!-- Content side -->
+      <div class="gift-card-content">
+        <div>
+          <div class="eyebrow" data-lang="lv">Sertifikāts masāžai</div>
+          <div class="eyebrow" data-lang="ru">Сертификат на массаж</div>
+          <h3 style="margin-top:6px;">
+            <span data-lang="lv">Ideāla dāvana mīļajiem</span>
+            <span data-lang="ru">Идеальный подарок близким</span>
+          </h3>
+        </div>
+
+        <div class="gift-card-price">
+          <span class="gift-card-price-num">100</span>
+          <span class="gift-card-price-cur">€</span>
+        </div>
+
+        <p>
+          <span data-lang="lv">Iegādājies dāvanu karti 100 EUR vērtībā uz jebkuriem Alvis Meiers masāžas pakalpojumiem. Tā ir īpaša un rūpīga dāvana cilvēkam, kurš ir pelnījis rūpēties par sevi.</span>
+          <span data-lang="ru">Приобретите подарочную карту на 100 EUR для любых услуг массажа Алвиса Мейерса. Это особенный и заботливый подарок для человека, который заслуживает позаботиться о себе.</span>
+        </p>
+
+        <ul class="proc-list" style="gap:9px;">
+          <li>
+            <span data-lang="lv">Derīga visām procedūrām</span>
+            <span data-lang="ru">Действует на все процедуры</span>
+          </li>
+          <li>
+            <span data-lang="lv">Sertifikāts tiek nosūtīts elektroniski</span>
+            <span data-lang="ru">Сертификат отправляется в электронном виде</span>
+          </li>
+          <li>
+            <span data-lang="lv">Dāvinājums sev vai tuvajiem</span>
+            <span data-lang="ru">Подарок себе или близким</span>
+          </li>
+        </ul>
+
+        <a class="btn btn-primary" href="#pieteikties" id="gift-card-cta" onclick="document.querySelector('input[value=davanu-karte]').checked=true;" style="align-self:flex-start;">
+          <span data-lang="lv">Pasūtīt dāvanu karti →</span>
+          <span data-lang="ru">Заказать подарочную карту →</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -1564,6 +1754,7 @@
               <label class="chip"><input type="radio" name="service" value="2h" /><span data-lang="lv">2h procedūra</span><span data-lang="ru">Процедура 2ч</span></label>
               <label class="chip"><input type="radio" name="service" value="mannea" /><span>MANNEA</span></label>
               <label class="chip"><input type="radio" name="service" value="kurss" /><span data-lang="lv">Kurss (6×)</span><span data-lang="ru">Курс (6×)</span></label>
+              <label class="chip"><input type="radio" name="service" value="davanu-karte" /><span data-lang="lv">🎁 Dāvanu karte</span><span data-lang="ru">🎁 Подарочная карта</span></label>
             </div>
           </div>
           <div class="field">
