@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Masieris Rīgā | Ārstnieciskā masāža un MANNEA terapija – Alvis Meiers</title>
-  <meta name="description" content="Alvis Meiers – ārstniecības persona, masieris Rīgā. Ārstnieciskā masāža, saistaudu terapija un MANNEA terapija. Palīdzība muguras, kakla un plecu sāpēm. +371 29179767." />
-  <meta name="keywords" content="masieris Rīgā, ārstnieciskā masāža Rīgā, saistaudu masāža, MANNEA terapija, muguras sāpes" />
+  <title>Masieris Rīgā | Saistaudu masāža, MANNEA terapija, dāvanu kartes – Alvis Meiers</title>
+  <meta name="description" content="Alvis Meiers – ārstniecības persona ar augstāko medicīnisko izglītību. Saistaudu masāža, MANNEA terapija, klasiskā masāža Rīgā. Procedūru kurss 6×2h. Elektroniskās dāvanu kartes 60–120 EUR. +371 29179767." />
+  <meta name="keywords" content="masieris Rīgā, ārstnieciskā masāža Rīgā, saistaudu masāža, MANNEA terapija, muguras sāpes, dāvanu karte masāžai, procedūru kurss" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#f0ede6" />
   <meta name="geo.region" content="LV-RIX" />
   <meta name="geo.placename" content="Rīga" />
-  <meta property="og:title" content="Masieris Rīgā – Alvis Meiers" />
-  <meta property="og:description" content="Ārstnieciskā masāža, saistaudu terapija un MANNEA terapija Rīgā." />
+  <meta property="og:title" content="Masieris Rīgā | Saistaudu masāža un MANNEA terapija – Alvis Meiers" />
+  <meta property="og:description" content="Ārstnieciskā masāža, saistaudu terapija, MANNEA terapija un dāvanu kartes Rīgā. Procedūru kurss 6×2h." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -62,6 +62,8 @@
     body.ru [data-lang="ru"]           { display: block !important; }
     body.lv span[data-lang="lv"],
     body.lv a[data-lang="lv"]          { display: inline !important; }
+    body.lv .marquee-item[data-lang="lv"] { display: inline-flex !important; }
+    body.ru .marquee-item[data-lang="ru"] { display: inline-flex !important; }
     body.ru span[data-lang="ru"],
     body.ru a[data-lang="ru"]          { display: inline !important; }
     body.lv li[data-lang="lv"],
@@ -96,6 +98,16 @@
       line-height: 1.25;
     }
     h4 { font-size: 1rem; line-height: 1.3; }
+    /* ─── PLAYFAIR FOR CYRILLIC ─── */
+    body.ru h1, body.ru h2, body.ru h3,
+    body.ru .hero-meta-val,
+    body.ru .about-stat-val,
+    body.ru .gift-card-price-num,
+    body.ru .gift-card-price-cur {
+      font-family: 'Playfair Display', 'DM Serif Display', serif;
+      font-weight: 900;
+    }
+
     p { color: var(--muted); line-height: 1.75; font-size: .97rem; }
     a { text-decoration: none; color: inherit; }
 
@@ -628,6 +640,7 @@
       font-size: .95rem;
     }
     input:focus, textarea:focus { border-color: var(--sage); background: var(--surface); }
+    #wa-message:focus { border-color: var(--sage); background: var(--surface); outline: none; }
 
     /* ─── FOOTER ─── */
     footer { background: var(--text); padding: 40px 0; }
@@ -696,6 +709,8 @@
     .cert-item::after { content: "🔍"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 1.4rem; opacity: 0; transition: opacity .2s; pointer-events: none; }
     .cert-item:hover::after { opacity: 1; }
     .cert-item--wide { grid-column: span 2; aspect-ratio: 3/2; }
+    .cert-item[style*="grid-column:span 2"] { aspect-ratio: unset; }
+    .cert-item[style*="grid-column:span 2"] img { object-fit: contain; background: #fff; }
     .cert-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* ─── COOKIE BANNER ─── */
@@ -997,8 +1012,7 @@
   <div class="container">
     <nav>
       <a class="brand" href="#">
-        <span data-lang="lv">Alvis Meiers</span>
-        <span data-lang="ru">Алвис Мейерс</span>
+        <span>Alvis Meiers</span>
       </a>
       <div class="nav-links" role="navigation">
         <a href="#pakalpojumi" data-lang="lv">Procedūras</a>
@@ -1064,15 +1078,17 @@
 
       <div class="hero-meta h-anim" style="animation-delay:.62s;">
         <div class="hero-meta-item">
-          <span class="hero-meta-val">no 60€</span>
+          <span class="hero-meta-val" data-lang="lv">no 60€</span>
+          <span class="hero-meta-val" data-lang="ru">от 60€</span>
           <span class="hero-meta-lbl" data-lang="lv">Procedūru cenas</span>
           <span class="hero-meta-lbl" data-lang="ru">Стоимость процедур</span>
         </div>
         <div class="hero-meta-sep"></div>
         <div class="hero-meta-item">
-          <span class="hero-meta-val">3</span>
+          <span class="hero-meta-val" data-lang="lv">Vairāki</span>
+          <span class="hero-meta-val" data-lang="ru">Несколько</span>
           <span class="hero-meta-lbl" data-lang="lv">Terapijas veidi</span>
-          <span class="hero-meta-lbl" data-lang="ru">Вида терапии</span>
+          <span class="hero-meta-lbl" data-lang="ru">Видов терапии</span>
         </div>
         <div class="hero-meta-sep"></div>
         <div class="hero-meta-item">
@@ -1093,7 +1109,8 @@
         </video>
 
         <div class="hero-overlay-card hero-card-tag h-float" style="animation-delay:.2s;">
-          <div style="font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.7);">Ārstniecības personas</div>
+          <div style="font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-lang="lv">Ārstniecības persona · Masieris</div>
+          <div style="font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.7);" data-lang="ru">Ārstniecības persona · Masieris</div>
           <div style="color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;margin-top:3px;font-size:.88rem;">ID 25520073901</div>
         </div>
 
@@ -1112,22 +1129,38 @@
 <!-- ─── MARQUEE ─── -->
 <div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-track">
-    <span class="marquee-item"><span class="dot"></span>Saistaudu masāža</span>
-    <span class="marquee-item"><span class="dot"></span>Klasiskā masāža</span>
-    <span class="marquee-item"><span class="dot"></span>MANNEA terapija</span>
-    <span class="marquee-item"><span class="dot"></span>Muguras sāpes</span>
-    <span class="marquee-item"><span class="dot"></span>Kakla sāpes</span>
-    <span class="marquee-item"><span class="dot"></span>Plecu sāpes</span>
-    <span class="marquee-item"><span class="dot"></span>Ārstnieciskā masāža Rīgā</span>
-    <span class="marquee-item"><span class="dot"></span>Alvis Meiers</span>
-    <span class="marquee-item"><span class="dot"></span>Saistaudu masāža</span>
-    <span class="marquee-item"><span class="dot"></span>Klasiskā masāža</span>
-    <span class="marquee-item"><span class="dot"></span>MANNEA terapija</span>
-    <span class="marquee-item"><span class="dot"></span>Muguras sāpes</span>
-    <span class="marquee-item"><span class="dot"></span>Kakla sāpes</span>
-    <span class="marquee-item"><span class="dot"></span>Plecu sāpes</span>
-    <span class="marquee-item"><span class="dot"></span>Ārstnieciskā masāža Rīgā</span>
-    <span class="marquee-item"><span class="dot"></span>Alvis Meiers</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Saistaudu masāža</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Массаж соединит. ткани</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Klasiskā masāža</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Классический массаж</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>MANNEA terapija</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>MANNEA терапия</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Muguras sāpes</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Боли в спине</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Kakla sāpes</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Боли в шее</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Plecu sāpes</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Боли в плечах</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Ārstnieciskā masāža Rīgā</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Лечебный массаж в Риге</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Alvis Meiers</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Алвис Мейерс</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Saistaudu masāža</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Массаж соединит. ткани</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Klasiskā masāža</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Классический массаж</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>MANNEA terapija</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>MANNEA терапия</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Muguras sāpes</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Боли в спине</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Kakla sāpes</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Боли в шее</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Plecu sāpes</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Боли в плечах</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Ārstnieciskā masāža Rīgā</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Лечебный массаж в Риге</span>
+    <span class="marquee-item" data-lang="lv"><span class="dot"></span>Alvis Meiers</span>
+    <span class="marquee-item" data-lang="ru"><span class="dot"></span>Алвис Мейерс</span>
   </div>
 </div>
 
@@ -1185,7 +1218,8 @@
         <div class="proc-badge" data-lang="lv">Līdz 60 min</div>
         <div class="proc-badge" data-lang="ru">До 60 мин</div>
         <div class="proc-header">
-          <h3>MANNEA terapija</h3>
+          <h3 data-lang="lv">MANNEA terapija</h3>
+          <h3 data-lang="ru">MANNEA terapija</h3>
           <div style="text-align:right;">
             <div class="proc-amount">90€</div>
             <div class="proc-period" data-lang="lv">bērniem (līdz 12 g.) 75€</div>
@@ -1261,7 +1295,7 @@
           <li data-lang="ru">Спина и ягодичная зона</li>
           <li data-lang="lv">Kājas</li>
           <li data-lang="ru">Ноги</li>
-          <li data-lang="lv">Galvas reflektoro punktu apstrāde</li>
+          <li data-lang="lv">Darbs ar reflektoriem punktiem</li>
           <li data-lang="ru">Обработка рефлекторных точек головы</li>
         </ul>
         <button class="proc-learn" data-modal-target="modal-saistaudi">
@@ -1270,10 +1304,12 @@
         </button>
       </article>
 
-      <!-- 5. Procedūru kurss — 6×, 100€/proc -->
-      <article class="proc-card reveal">
-        <div class="proc-badge" data-lang="lv">6 reizes</div>
-        <div class="proc-badge" data-lang="ru">6 сеансов</div>
+      <!-- 5. Procedūru kurss — 6×2h, 100€/proc — FEATURED -->
+      <article class="proc-card featured reveal">
+        <div class="featured-ribbon" data-lang="lv">Izdevīgākā izvēle</div>
+        <div class="featured-ribbon" data-lang="ru">Лучшее соотношение</div>
+        <div class="proc-badge" data-lang="lv">6 × 2 stundas</div>
+        <div class="proc-badge" data-lang="ru">6 × 2 часа</div>
         <div class="proc-header">
           <h3>
             <span data-lang="lv">Procedūru kurss</span>
@@ -1286,8 +1322,8 @@
           </div>
         </div>
         <p class="proc-desc">
-          <span data-lang="lv">Pilns kurss secīgai un padziļinātai atveseļošanai.</span>
-          <span data-lang="ru">Полный курс для последовательного глубокого восстановления.</span>
+          <span data-lang="lv">Pilns kurss secīgai un padziļinātai atveseļošanai — 6 sesijas, katra 2 stundas.</span>
+          <span data-lang="ru">Полный курс последовательного глубокого восстановления — 6 сеансов по 2 часа.</span>
         </p>
         <ul class="proc-list">
           <li data-lang="lv">1.–4. – saistaudu + klasiskā masāža, galvas apstrāde</li>
@@ -1297,10 +1333,8 @@
         </ul>
       </article>
 
-      <!-- 6. Dziļās korekcijas — 2h, 120€ — FEATURED -->
-      <article class="proc-card featured reveal">
-        <div class="featured-ribbon" data-lang="lv">Izdevīgākā izvēle</div>
-        <div class="featured-ribbon" data-lang="ru">Лучшее соотношение</div>
+      <!-- 6. Dziļās korekcijas — 2h, 120€ -->
+      <article class="proc-card reveal">
         <div class="proc-badge" data-lang="lv">2 stundas · Tikai pieaugušajiem</div>
         <div class="proc-badge" data-lang="ru">2 часа · Только для взрослых</div>
         <div class="proc-header">
@@ -1354,12 +1388,8 @@
 
     <div class="gift-card-layout reveal scale-in">
       <!-- Visual side -->
-      <div class="gift-card-visual">
-        <div class="gift-card-placeholder">
-          <span class="gift-card-placeholder-icon">🎁</span>
-          <span data-lang="lv">Dāvanu karte<br>ar foto</span>
-          <span data-lang="ru">Подарочная карта<br>с фото</span>
-        </div>
+      <div class="gift-card-visual" style="padding:32px;background:linear-gradient(135deg,#2d3a2e 0%,#4e6b54 100%);">
+        <img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/120.png" alt="Dāvanu sertifikāts" loading="lazy" style="width:100%;max-width:320px;border-radius:var(--radius-sm);box-shadow:0 16px 48px rgba(0,0,0,.4);">
         <span class="gift-card-badge" data-lang="lv">Dāvanu sertifikāts</span>
         <span class="gift-card-badge" data-lang="ru">Подарочный сертификат</span>
       </div>
@@ -1375,24 +1405,37 @@
           </h3>
         </div>
 
-        <div class="gift-card-price">
-          <span class="gift-card-price-num">100</span>
-          <span class="gift-card-price-cur">€</span>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin:4px 0;">
+          <div style="display:flex;flex-direction:column;align-items:center;padding:14px 20px;border-radius:var(--radius-sm);background:var(--sage-bg);border:2px solid var(--line);">
+            <span style="font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--sage-dark);line-height:1;">60€</span>
+            <span style="font-size:.72rem;color:var(--muted);margin-top:3px;" data-lang="lv">Pamata</span>
+            <span style="font-size:.72rem;color:var(--muted);margin-top:3px;" data-lang="ru">Базовая</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;padding:14px 20px;border-radius:var(--radius-sm);background:var(--sage);border:2px solid var(--sage);">
+            <span style="font-family:'DM Serif Display',serif;font-size:1.9rem;color:#fff;line-height:1;">100€</span>
+            <span style="font-size:.72rem;color:rgba(255,255,255,.75);margin-top:3px;" data-lang="lv">Populārākā</span>
+            <span style="font-size:.72rem;color:rgba(255,255,255,.75);margin-top:3px;" data-lang="ru">Популярная</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;padding:14px 20px;border-radius:var(--radius-sm);background:var(--sage-bg);border:2px solid var(--line);">
+            <span style="font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--sage-dark);line-height:1;">120€</span>
+            <span style="font-size:.72rem;color:var(--muted);margin-top:3px;" data-lang="lv">Premium</span>
+            <span style="font-size:.72rem;color:var(--muted);margin-top:3px;" data-lang="ru">Премиум</span>
+          </div>
         </div>
 
         <p>
-          <span data-lang="lv">Iegādājies dāvanu karti 100 EUR vērtībā uz jebkuriem Alvis Meiers masāžas pakalpojumiem. Tā ir īpaša un rūpīga dāvana cilvēkam, kurš ir pelnījis rūpēties par sevi.</span>
-          <span data-lang="ru">Приобретите подарочную карту на 100 EUR для любых услуг массажа Алвиса Мейерса. Это особенный и заботливый подарок для человека, который заслуживает позаботиться о себе.</span>
+          <span data-lang="lv">Iegādājies elektronisko dāvanu karti uz jebkuriem Alvis Meiers masāžas pakalpojumiem. Sertifikāts tiek nosūtīts uz e-pastu — uzreiz pēc pasūtījuma. Īpaša dāvana cilvēkam, kurš ir pelnījis rūpēties par sevi.</span>
+          <span data-lang="ru">Приобретите электронную подарочную карту на любые услуги массажа Алвиса Мейерса. Сертификат отправляется на e-mail — сразу после заказа. Особенный подарок для человека, который заслуживает заботы о себе.</span>
         </p>
 
         <ul class="proc-list" style="gap:9px;">
           <li>
-            <span data-lang="lv">Derīga visām procedūrām</span>
-            <span data-lang="ru">Действует на все процедуры</span>
+            <span data-lang="lv">Elektronisks sertifikāts — nosūtām uz e-pastu</span>
+            <span data-lang="ru">Электронный сертификат — отправляем на e-mail</span>
           </li>
           <li>
-            <span data-lang="lv">Sertifikāts tiek nosūtīts elektroniski</span>
-            <span data-lang="ru">Сертификат отправляется в электронном виде</span>
+            <span data-lang="lv">Derīga visām procedūrām</span>
+            <span data-lang="ru">Действует на все процедуры</span>
           </li>
           <li>
             <span data-lang="lv">Dāvinājums sev vai tuvajiem</span>
@@ -1400,9 +1443,9 @@
           </li>
         </ul>
 
-        <a class="btn btn-primary" href="#pieteikties" id="gift-card-cta" onclick="document.querySelector('input[value=davanu-karte]').checked=true;" style="align-self:flex-start;">
-          <span data-lang="lv">Pasūtīt dāvanu karti →</span>
-          <span data-lang="ru">Заказать подарочную карту →</span>
+        <a class="btn btn-primary" href="#pieteikties" id="gift-card-cta" onclick="setTimeout(()=>{let el=document.querySelector('input[value=davanu-karte]');if(el)el.checked=true;},100);" style="align-self:flex-start;background:var(--sage-dark);box-shadow:0 8px 28px rgba(78,107,84,.4);">
+          <span data-lang="lv">🎁 Pasūtīt dāvanu karti →</span>
+          <span data-lang="ru">🎁 Заказать подарочную карту →</span>
         </a>
       </div>
     </div>
@@ -1434,6 +1477,84 @@
   </div>
 </div>
 
+<!-- ─── ABOUT ─── -->
+<section class="section" id="par-specialistu" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">
+        <span data-lang="lv">Par speciālistu</span>
+        <span data-lang="ru">О специалисте</span>
+      </div>
+      <h2 data-lang="lv">Alvis Meiers</h2>
+      <h2 data-lang="ru">Алвис Мейерс</h2>
+    </div>
+
+    <div class="about-layout reveal scale-in">
+      <div class="about-photo-col">
+        <picture>
+          <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/erewhile/Alvis%20Meiers/alvis%20main%20mobile.png">
+          <img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/alvis%20main%20photo.jpg" alt="Alvis Meiers" loading="lazy">
+        </picture>
+        <div class="about-photo-badge">
+          <div class="about-photo-badge-icon">A</div>
+          <div>
+            <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:.93rem;" data-lang="lv">Alvis Meiers</div>
+            <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:.93rem;" data-lang="ru">Алвис Мейерс</div>
+            <div style="font-size:.76rem;color:var(--muted);" data-lang="lv">Ārstniecības persona · masieris · Rīgā</div>
+            <div style="font-size:.76rem;color:var(--muted);" data-lang="ru">Ārstniecības persona · masieris · Рига</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text-col">
+        <div class="eyebrow">
+          <span data-lang="lv">Ārstniecības persona · Masieris</span>
+          <span data-lang="ru">Ārstniecības persona · Masieris</span>
+        </div>
+        <p data-lang="lv">Kā masieris-ārstniecības persona es savā darbā apvienoju augstāko medicīnisko izglītību masiera specialitātē ar ilggadēju praktisko pieredzi, nodrošinot uz zinātnisku izpratni balstītu pieeju ķermeņa disfunkciju novēršanai.</p>
+        <p data-lang="lv">Mans ceļš un pirmās apmācības darbā ar ķermeni aizsākās jau 1993. gadā ar uz ķermeni orientētām psihotehnikām, kas gadu gaitā ir veidojušas manu izpratni par hroniska sasprindzinājuma patiesajiem cēloņiem. Tas man ļauj piedāvāt mērķtiecīgus risinājumus, kas sniedzas daudz tālāk par parastu muskuļu atslābināšanu.</p>
+        <p data-lang="lv">Manas terapijas pamatā ir vērsta iedarbība uz hronisku saspringumu un fizisko diskomfortu, sekmējot vispārējā ķermeņa līdzsvara atjaunošanu. Savā praksē es specializējos saistaudu masāžā, refleksoterapijā un Mannea terapijā, kā arī klasiskajās tehnikās. Apvienojot šīs metodes, es izstrādāju individuāli pielāgotu pieeju ikvienam klientam, palīdzot atgūt kustību prieku un pilnvērtīgu fizisko komfortu.</p>
+        <p data-lang="ru">Как массажист с медицинской квалификацией, в своей работе я сочетаю высшее медицинское образование по специальности «массажист» с многолетним практическим опытом, обеспечивая научно обоснованный подход к устранению дисфункций тела.</p>
+        <p data-lang="ru">Мой путь начался в 1993 году с телесно-ориентированных психотехник — это сформировало моё понимание истинных причин хронического напряжения и позволяет предлагать решения, выходящие далеко за рамки обычного расслабления мышц.</p>
+        <p data-lang="ru">В основе моей терапии — точечное воздействие на хроническое напряжение и физический дискомфорт. Я специализируюсь на массаже соединительной ткани, рефлексотерапии и MANNEA-терапии, а также классических техниках, разрабатывая индивидуальный подход к каждому клиенту.</p>
+
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="about-stat-val" data-lang="lv">Vairākas</div>
+            <div class="about-stat-val" data-lang="ru">Несколько</div>
+            <div class="about-stat-lbl" data-lang="lv">Terapijas metodes</div>
+            <div class="about-stat-lbl" data-lang="ru">Методов терапии</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val" data-lang="lv">no 60€</div>
+            <div class="about-stat-val" data-lang="ru">от 60€</div>
+            <div class="about-stat-lbl" data-lang="lv">Procedūru cenas</div>
+            <div class="about-stat-lbl" data-lang="ru">Стоимость процедур</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val" data-lang="lv">Rīgā</div>
+            <div class="about-stat-val" data-lang="ru">Рига</div>
+            <div class="about-stat-lbl" data-lang="lv">Iepriekšējs pieraksts</div>
+            <div class="about-stat-lbl" data-lang="ru">Предварительная запись</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val">25%</div>
+            <div class="about-stat-lbl" data-lang="lv">Atlaide bērniem (līdz 12 g.)</div>
+            <div class="about-stat-lbl" data-lang="ru">Скидка детям (до 12 л.)</div>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn btn-primary" data-modal-target="modal-certificates" style="background:var(--sage-dark);box-shadow:0 8px 28px rgba(78,107,84,.35);">
+            <span data-lang="lv">📜 Apskatīt sertifikātus →</span>
+            <span data-lang="ru">📜 Посмотреть сертификаты →</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── PHOTO SECTION ─── -->
 <div class="photo-section">
   <div class="container">
@@ -1457,92 +1578,19 @@
   </div>
 </div>
 
-<!-- ─── ABOUT ─── -->
-<section class="section" id="par-specialistu" style="background:var(--surface);">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">
-        <span data-lang="lv">Par speciālistu</span>
-        <span data-lang="ru">О специалисте</span>
-      </div>
-      <h2 data-lang="lv">Alvis Meiers</h2>
-      <h2 data-lang="ru">Алвис Мейерс</h2>
-    </div>
-
-    <div class="about-layout reveal scale-in">
-      <div class="about-photo-col">
-        <img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/alvis%20main%20photo.jpg" alt="Alvis Meiers" loading="lazy">
-        <div class="about-photo-badge">
-          <div class="about-photo-badge-icon">A</div>
-          <div>
-            <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:.93rem;" data-lang="lv">Alvis Meiers</div>
-            <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:.93rem;" data-lang="ru">Алвис Мейерс</div>
-            <div style="font-size:.76rem;color:var(--muted);" data-lang="lv">Ārstniecības persona · masieris · Rīgā</div>
-            <div style="font-size:.76rem;color:var(--muted);" data-lang="ru">Ārstniecības persona · masieris · Рига</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="about-text-col">
-        <div class="eyebrow">
-          <span data-lang="lv">Ārstniecības persona · Masieris</span>
-          <span data-lang="ru">Ārstniecības persona · Masieris</span>
-        </div>
-        <p data-lang="lv">Alvis Meiers apvieno ārstniecisku pieeju ar individuāli pielāgotu terapiju. Darbs nav vērsts tikai uz relaksāciju – galvenais mērķis ir reāla ietekme uz saspringumu, kustību ierobežojumiem un ķermeņa līdzsvaru.</p>
-        <p data-lang="ru">Алвис Мейерс сочетает лечебный подход с индивидуально подобранной терапией. Работа направлена не только на расслабление, но и на реальное воздействие на напряжение, ограничения движений и восстановление баланса тела.</p>
-        <p data-lang="lv">Katrā procedūrā tiek izmantota klasiskā masāža, saistaudu tehnikas un reflektoro zonu apstrāde – lai palīdzētu mazināt hronisku spriedzi un atgūt kustību brīvību.</p>
-        <p data-lang="ru">В каждой процедуре применяется классический массаж, техники соединительной ткани и обработка рефлекторных зон — для снижения хронического напряжения и восстановления свободы движений.</p>
-        <p data-lang="lv">Katrs apmeklējums tiek pielāgots konkrētajam cilvēkam un viņa pašsajūtai.</p>
-        <p data-lang="ru">Каждое посещение адаптируется под конкретного человека и его самочувствие.</p>
-
-        <div class="about-stats">
-          <div class="about-stat">
-            <div class="about-stat-val">3</div>
-            <div class="about-stat-lbl" data-lang="lv">Terapijas metodes</div>
-            <div class="about-stat-lbl" data-lang="ru">Метода терапии</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-val">no 60€</div>
-            <div class="about-stat-lbl" data-lang="lv">Procedūru cenas</div>
-            <div class="about-stat-lbl" data-lang="ru">Стоимость процедур</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-val">Rīgā</div>
-            <div class="about-stat-lbl" data-lang="lv">Iepriekšējs pieraksts</div>
-            <div class="about-stat-lbl" data-lang="ru">Предварительная запись</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-val">25%</div>
-            <div class="about-stat-lbl" data-lang="lv">Atlaide bērniem (līdz 12 g.)</div>
-            <div class="about-stat-lbl" data-lang="ru">Скидка детям (до 12 л.)</div>
-          </div>
-        </div>
-
-        <div>
-          <button class="btn btn-outline-sage" data-modal-target="modal-certificates">
-            <span data-lang="lv">Apskatīt sertifikātus</span>
-            <span data-lang="ru">Посмотреть сертификаты</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ─── MANNEA ─── -->
 <section class="section mannea-section" id="manea">
   <div class="container">
     <div class="mannea-layout">
       <div class="mannea-left reveal from-left">
         <div>
-          <img class="mannea-logo" src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/mannea%20logo.jpg" alt="MANNEA terapija" loading="lazy">
+          <img class="mannea-logo" src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/mannea%20logo.jpg" alt="MANNEA terapija" loading="lazy" data-lang="lv"><img class="mannea-logo" src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/mannea%20logo.jpg" alt="MANNEA терапия" loading="lazy" data-lang="ru">
         </div>
         <div>
-          <div class="eyebrow">MANNEA</div>
-          <h2>
-            <span data-lang="lv">Integratīva pieeja organisma līdzsvaram</span>
-            <span data-lang="ru">Интегративный подход к балансу организма</span>
-          </h2>
+          <div class="eyebrow" data-lang="lv">MANNEA terapija</div>
+          <div class="eyebrow" data-lang="ru">MANNEA терапия</div>
+          <h2 data-lang="lv">Integratīva pieeja organisma līdzsvaram</h2>
+          <h2 data-lang="ru">Комплексный подход к балансу организма</h2>
         </div>
         <p data-lang="lv">Tā nav relaksācija. Šī metode aktivizē organisma sistēmas – hormonālo, gremošanas, nervu – un atjauno to līdzsvaru. Piemērota situācijām, kad ķermenim nepietiek tikai ar atpūtu.</p>
         <p data-lang="ru">Это не расслабление. Метод активирует системы организма — гормональную, пищеварительную, нервную — и восстанавливает их баланс. Подходит, когда телу уже недостаточно просто отдыха.</p>
@@ -1724,68 +1772,66 @@
         <div style="margin-top:auto;">
           <div style="font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:10px;">Rīga, Latvija</div>
           <img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/DSC05648.jpg" alt="Darba vide" loading="lazy"
-               style="width:100%;border-radius:var(--radius-sm);aspect-ratio:4/3;object-fit:cover;display:block;opacity:.75;">
+               style="width:100%;border-radius:var(--radius-sm);aspect-ratio:4/3;object-fit:cover;display:block;">
         </div>
       </div>
 
-      <div class="contact-right">
-        <h3 data-lang="lv">Pieteikuma forma</h3>
-        <h3 data-lang="ru">Форма записи</h3>
-        <p data-lang="lv">Aizpildi formu, lai pieteiktos vai uzdotu jautājumu.</p>
-        <p data-lang="ru">Заполните форму, чтобы записаться или задать вопрос.</p>
+      <div class="contact-right" id="pieteikties-form">
+        <h3 data-lang="lv">Raksti mums WhatsApp</h3>
+        <h3 data-lang="ru">Напишите нам в WhatsApp</h3>
+        <p style="margin-bottom:20px;" data-lang="lv">Izvēlies tematu — tas tiks pievienots ziņai automātiski. Vai vienkārši uzraksti pats.</p>
+        <p style="margin-bottom:20px;" data-lang="ru">Выберите тему — она подставится в сообщение автоматически. Или напишите сами.</p>
 
-        <form id="contact-form">
-          <div class="field">
-            <label data-lang="lv">Vārds</label>
-            <label data-lang="ru">Имя</label>
-            <input type="text" name="name" data-placeholder-lv="Vārds" data-placeholder-ru="Имя" placeholder="Vārds" autocomplete="given-name" />
+        <div style="display:grid;gap:10px;margin-bottom:24px;">
+          <div style="font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);" data-lang="lv">Izvēlies pakalpojumu</div>
+          <div style="font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);" data-lang="ru">Выберите услугу</div>
+          <div class="chip-group" id="wa-chips" role="group">
+            <label class="chip">
+              <input type="radio" name="wa-service" value="Saistaudu masāža" data-ru="Массаж соединительной ткани" />
+              <span data-lang="lv">Saistaudu masāža</span><span data-lang="ru">Массаж соед. ткани</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="wa-service" value="Klasiskā masāža" data-ru="Классический массаж" />
+              <span data-lang="lv">Klasiskā masāža</span><span data-lang="ru">Классический массаж</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="wa-service" value="2h dziļās korekcijas procedūra" data-ru="Процедура глубокой коррекции 2ч" />
+              <span data-lang="lv">2h procedūra</span><span data-lang="ru">Процедура 2ч</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="wa-service" value="MANNEA terapija" data-ru="MANNEA терапия" />
+              <span>MANNEA</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="wa-service" value="Procedūru kurss 6×2h" data-ru="Курс процедур 6×2ч" />
+              <span data-lang="lv">Kurss (6×2h)</span><span data-lang="ru">Курс (6×2ч)</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="wa-service" value="Dāvanu karte" data-ru="Подарочная карта" />
+              <span data-lang="lv">🎁 Dāvanu karte</span><span data-lang="ru">🎁 Подарочная карта</span>
+            </label>
           </div>
-          <div class="field">
-            <label data-lang="lv">Tālrunis</label>
-            <label data-lang="ru">Телефон</label>
-            <input type="tel" name="phone" placeholder="+371 29 000 000" autocomplete="tel" />
-          </div>
-          <div class="field">
-            <label data-lang="lv">Procedūras veids</label>
-            <label data-lang="ru">Вид процедуры</label>
-            <div class="chip-group" role="group">
-              <label class="chip"><input type="radio" name="service" value="saistaudu" /><span data-lang="lv">Saistaudu masāža</span><span data-lang="ru">Массаж соед. ткани</span></label>
-              <label class="chip"><input type="radio" name="service" value="klasiska" /><span data-lang="lv">Klasiskā masāža</span><span data-lang="ru">Классический массаж</span></label>
-              <label class="chip"><input type="radio" name="service" value="2h" /><span data-lang="lv">2h procedūra</span><span data-lang="ru">Процедура 2ч</span></label>
-              <label class="chip"><input type="radio" name="service" value="mannea" /><span>MANNEA</span></label>
-              <label class="chip"><input type="radio" name="service" value="kurss" /><span data-lang="lv">Kurss (6×)</span><span data-lang="ru">Курс (6×)</span></label>
-              <label class="chip"><input type="radio" name="service" value="davanu-karte" /><span data-lang="lv">🎁 Dāvanu karte</span><span data-lang="ru">🎁 Подарочная карта</span></label>
-            </div>
-          </div>
-          <div class="field">
-            <label data-lang="lv">Problēmzona</label>
-            <label data-lang="ru">Проблемная зона</label>
-            <div class="chip-group" role="group">
-              <label class="chip"><input type="checkbox" name="zone" value="mugura" /><span data-lang="lv">Mugura</span><span data-lang="ru">Спина</span></label>
-              <label class="chip"><input type="checkbox" name="zone" value="kakls" /><span data-lang="lv">Kakls / pleci</span><span data-lang="ru">Шея / плечи</span></label>
-              <label class="chip"><input type="checkbox" name="zone" value="kajas" /><span data-lang="lv">Kājas</span><span data-lang="ru">Ноги</span></label>
-              <label class="chip"><input type="checkbox" name="zone" value="viss" /><span data-lang="lv">Viss ķermenis</span><span data-lang="ru">Всё тело</span></label>
-              <label class="chip"><input type="checkbox" name="zone" value="cits" /><span data-lang="lv">Cits</span><span data-lang="ru">Другое</span></label>
-            </div>
-          </div>
-          <div class="field">
-            <label data-lang="lv">Klients</label>
-            <label data-lang="ru">Клиент</label>
-            <div class="toggle-group" role="group">
-              <label class="toggle-opt"><input type="radio" name="agegroup" value="adult" checked /><span data-lang="lv">Pieaugušais</span><span data-lang="ru">Взрослый</span></label>
-              <label class="toggle-opt"><input type="radio" name="agegroup" value="child" /><span data-lang="lv">Bērns (līdz 12 g.)</span><span data-lang="ru">Ребёнок (до 12 л.)</span></label>
-            </div>
-          </div>
-          <div class="field">
-            <label data-lang="lv">Ziņa (nav obligāti)</label>
-            <label data-lang="ru">Сообщение (необязательно)</label>
-            <textarea name="message" rows="3" placeholder="…"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;height:56px;">
-            <span data-lang="lv">Nosūtīt pieteikumu →</span>
-            <span data-lang="ru">Отправить заявку →</span>
-          </button>
-        </form>
+        </div>
+
+        <div style="display:grid;gap:8px;margin-bottom:20px;">
+          <div style="font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);" data-lang="lv">Tavs ziņojums</div>
+          <div style="font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);" data-lang="ru">Ваше сообщение</div>
+          <textarea id="wa-message" rows="4"
+            style="width:100%;border:1.5px solid var(--line);background:var(--cream);border-radius:var(--radius-sm);padding:13px 15px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);resize:vertical;outline:none;transition:border-color .2s;line-height:1.6;"
+            data-placeholder-lv="Sveiki, vēlos pierakstīties…"
+            data-placeholder-ru="Здравствуйте, хочу записаться…"
+            placeholder="Sveiki, vēlos pierakstīties…"></textarea>
+        </div>
+
+        <a id="wa-send-btn" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer"
+           style="width:100%;height:56px;font-size:.95rem;">
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="none" style="flex-shrink:0;"><circle cx="16" cy="16" r="16" fill="none"/><path d="M16 3C8.82 3 3 8.82 3 16c0 2.3.6 4.45 1.64 6.32L3 29l6.84-1.6A13 13 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm6.4 18.4c-.27.76-1.58 1.46-2.17 1.55-.56.08-1.26.12-2.03-.13-.47-.15-1.07-.35-1.84-.69-3.24-1.4-5.35-4.68-5.51-4.9-.16-.22-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.27-.3.6-.38.8-.38.2 0 .4.002.57.01.18.01.43-.07.67.51.27.62.9 2.2.98 2.36.08.16.13.34.03.55-.1.2-.15.33-.3.51-.16.18-.33.4-.47.54-.16.16-.32.33-.14.65.18.32.82 1.36 1.76 2.2 1.21 1.08 2.23 1.41 2.55 1.57.32.16.5.13.69-.08.19-.21.82-.96 1.04-1.29.21-.33.43-.27.72-.16.3.11 1.87.88 2.19 1.04.32.16.53.24.61.38.08.14.08.8-.19 1.56z" fill="white"/></svg>
+          <span data-lang="lv">Rakstīt WhatsApp →</span>
+          <span data-lang="ru">Написать в WhatsApp →</span>
+        </a>
+
+        <p style="margin-top:12px;font-size:.78rem;text-align:center;" data-lang="lv">vai zvaniet: <a href="tel:+37129179767" style="color:var(--sage-dark);font-weight:700;">+371 29179767</a></p>
+        <p style="margin-top:12px;font-size:.78rem;text-align:center;" data-lang="ru">или звоните: <a href="tel:+37129179767" style="color:var(--sage-dark);font-weight:700;">+371 29179767</a></p>
       </div>
     </div>
   </div>
@@ -1953,13 +1999,15 @@
         <h3 data-lang="ru">Сертификаты</h3>
       </div>
       <div class="cert-grid">
-        <div class="cert-item" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/1.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/1.png" alt="Sertifikāts 1" loading="lazy"></div>
+        <div class="cert-item" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/1%20edited.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/1%20edited.png" alt="Sertifikāts 1" loading="lazy"></div>
         <div class="cert-item" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/2.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/2.png" alt="Sertifikāts 2" loading="lazy"></div>
         <div class="cert-item" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/3.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/3.png" alt="Sertifikāts 3" loading="lazy"></div>
         <div class="cert-item" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/4.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/4.png" alt="Sertifikāts 4" loading="lazy"></div>
-        <div class="cert-item" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/5.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/5.png" alt="Sertifikāts 5" loading="lazy"></div>
+        <div class="cert-item" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/5%20edited.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/5%20edited.png" alt="Sertifikāts 5" loading="lazy"></div>
         <div class="cert-item" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/6.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/6.png" alt="Sertifikāts 6" loading="lazy"></div>
-        <div class="cert-item" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/7.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/7.png" alt="Sertifikāts 7" loading="lazy"></div>
+        <div class="cert-item" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/7%20edited.png?updatedAt=1780846805074"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/7%20edited.png?updatedAt=1780846805074" alt="Sertifikāts 7" loading="lazy"></div>
+        <div class="cert-item" style="grid-column:span 2;" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/9.png?updatedAt=1780846653510"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/9.png?updatedAt=1780846653510" alt="Sertifikāts 9" loading="lazy"></div>
+        <div class="cert-item" style="grid-column:span 2;" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/sertifikats%20am.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/sertifikats%20am.png" alt="Sertifikāts AM" loading="lazy"></div>
         <div class="cert-item cert-item--wide" data-src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/8.png"><img src="https://ik.imagekit.io/erewhile/Alvis%20Meiers/Diploms/8.png" alt="Sertifikāts 8" loading="lazy"></div>
       </div>
 
@@ -1987,7 +2035,7 @@
       <div data-lang="lv">
         <div class="eyebrow">Privātuma politika</div>
         <h3>Privātuma politika</h3>
-        <p style="font-size:.82rem;color:var(--muted);">Spēkā no: 2025. gada 1. janvāra · Pēdējās izmaiņas: 2025. gads</p>
+        <p style="font-size:.82rem;color:var(--muted);">Spēkā no: 2026. gada 1. jūnija · Pēdējās izmaiņas: 2026. gads</p>
 
         <div class="modal-section">
           <h4>1. Pārzinis</h4>
@@ -2038,7 +2086,7 @@
       <div data-lang="ru">
         <div class="eyebrow">Политика конфиденциальности</div>
         <h3>Политика конфиденциальности</h3>
-        <p style="font-size:.82rem;color:var(--muted);">Действует с: 1 января 2025 г. · Последнее обновление: 2025 г.</p>
+        <p style="font-size:.82rem;color:var(--muted);">Действует с: 1 июня 2026 г. · Последнее обновление: 2026 г.</p>
 
         <div class="modal-section">
           <h4>1. Оператор данных</h4>
@@ -2175,6 +2223,73 @@ cookieAccept.addEventListener('click', () => {
   localStorage.setItem('privacy-accepted', '1');
   cookieBanner.classList.add('hidden');
 });
+
+
+// ─── WHATSAPP WIDGET ───
+(function() {
+  const PHONE = '37129179767';
+  const chips = document.querySelectorAll('#wa-chips input[name="wa-service"]');
+  const msgArea = document.getElementById('wa-message');
+  const sendBtn = document.getElementById('wa-send-btn');
+  if (!sendBtn || !msgArea) return;
+
+  function getLang() {
+    return document.body.classList.contains('ru') ? 'ru' : 'lv';
+  }
+
+  function buildMessage() {
+    const lang = getLang();
+    const checked = document.querySelector('#wa-chips input[name="wa-service"]:checked');
+    let service = '';
+    if (checked) {
+      service = lang === 'ru'
+        ? (checked.dataset.ru || checked.value)
+        : checked.value;
+    }
+    const manual = msgArea.value.trim();
+    if (manual) return manual;
+    if (service) {
+      return lang === 'ru'
+        ? `Здравствуйте, хочу записаться на: ${service}`
+        : `Sveiki, vēlos pierakstīties uz: ${service}`;
+    }
+    return lang === 'ru' ? 'Здравствуйте, хочу записаться.' : 'Sveiki, vēlos pierakstīties.';
+  }
+
+  function updateLink() {
+    const text = encodeURIComponent(buildMessage());
+    sendBtn.href = `https://wa.me/${PHONE}?text=${text}`;
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('change', () => {
+      const lang = getLang();
+      const service = lang === 'ru'
+        ? (chip.dataset.ru || chip.value)
+        : chip.value;
+      const isGift = chip.value === 'Dāvanu karte';
+      if (isGift) {
+        msgArea.value = lang === 'ru'
+          ? 'Здравствуйте, интересует подарочная карта на массаж. Расскажите, пожалуйста, подробнее.'
+          : 'Sveiki, interesē dāvanu karte masāžai. Lūdzu, pastāstiet vairāk.';
+      } else {
+        msgArea.value = lang === 'ru'
+          ? `Здравствуйте, хочу записаться на: ${service}`
+          : `Sveiki, vēlos pierakstīties uz: ${service}`;
+      }
+      updateLink();
+    });
+  });
+
+  msgArea.addEventListener('input', updateLink);
+
+  // update on lang change
+  document.querySelectorAll('[data-set-lang]').forEach(btn => {
+    btn.addEventListener('click', () => setTimeout(updateLink, 50));
+  });
+
+  updateLink();
+})();
 
 // ─── CERTIFICATE LIGHTBOX ───
 (function() {
