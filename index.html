@@ -862,9 +862,11 @@
       .hero-actions .btn { width: 100%; justify-content: center; }
       h1 { font-size: clamp(1.9rem, 8vw, 2.8rem); }
       .mannea-layout { grid-template-columns: 1fr; }
+      .mannea-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); padding: 40px 0 32px; }
+      .mannea-right { padding: 32px 0 40px; }
       .about-layout { grid-template-columns: 1fr; }
       .about-text-col { padding: 28px 20px; }
-      .about-stat-val { font-size: 1.25rem; hyphens: none; overflow-wrap: normal; word-break: normal; }
+      .about-stat-val { font-size: 1.1rem; hyphens: none; overflow-wrap: normal; word-break: normal; white-space: nowrap; }
       .about-stat { padding: 14px 14px; }
       .about-photo-badge { left: 12px; right: 12px; bottom: 12px; padding: 10px 12px; gap: 8px; }
       .about-photo-badge-icon { width: 34px; height: 34px; font-size: 1rem; }
@@ -903,6 +905,8 @@
     @media (max-width: 400px) {
       .nav-mobile { gap: 5px; }
       .nav-mobile-link { padding: 6px 9px; font-size: .75rem; }
+      .about-stat-val { font-size: 1.05rem; }
+      .about-stat { padding: 12px 10px; }
     }
     /* ─── GIFT CARD ─── */
     .gift-card-section { background: var(--surface); }
@@ -1861,7 +1865,7 @@
         <div class="footer-brand" data-lang="lv">Alvis Meiers</div>
         <div class="footer-brand" data-lang="ru">Алвис Мейерс</div>
         <div class="footer-sub" data-lang="lv">Ārstniecības persona · masieris Rīgā · Ārstnieciskā masāža un MANNEA terapija</div>
-        <div class="footer-sub" data-lang="ru">Ārstniecības persona · masieris · Рига · Лечебный массаж и MANNEA терапия</div>
+        <div class="footer-sub" data-lang="ru">Медицинский работник · Массажист · Рига · Лечебный массаж и MANNEA терапия</div>
       </div>
       <div class="footer-btns">
         <button class="btn btn-footer-ghost" data-modal-target="modal-privacy" style="height:44px;font-size:.82rem;" data-lang="lv">Privātuma politika</button>
